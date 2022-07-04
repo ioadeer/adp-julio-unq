@@ -1,0 +1,513 @@
+1.3445 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice'] (in that order).
+7.3985 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([1., 1., 1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000158C62DEB20>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000158C6382610>, multiSample=False, name='window1', numSamples=2, pos=(0, 0), screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.3988 	EXP 	window1: mouseVisible = True
+7.3988 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+7.3988 	EXP 	window1: recordFrameIntervals = False
+7.5651 	EXP 	window1: recordFrameIntervals = True
+7.7487 	EXP 	Screen (0) actual frame rate measured at 59.95Hz
+7.7487 	EXP 	window1: recordFrameIntervals = False
+9.3291 	EXP 	Created image_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='res/caratula.jpg', interpolate=True, mask=None, maskParams=None, name='image_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1. ]), texRes=128.0, units='height', win=Window(...))
+9.3813 	EXP 	Created instruccion = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='res/instruccion.jpg', interpolate=True, mask=None, maskParams=None, name='instruccion', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1. ]), texRes=128.0, units='height', win=Window(...))
+9.4355 	EXP 	Created instruccion_2 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='res/instruccion-prueba.jpg', interpolate=True, mask=None, maskParams=None, name='instruccion_2', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1. ]), texRes=128.0, units='height', win=Window(...))
+9.4624 	EXP 	Sound soundEst set volume 1.000
+9.4984 	EXP 	Created testText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='testText', opacity=1, ori=0, pos=array([ 0.  , -0.25]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.5193 	EXP 	Created instr_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instr_2', opacity=1, ori=0, pos=array([0.  , 0.25]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.5693 	EXP 	Created instruccion_3 = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, anchor=('center', 'center'), autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='res/instruccion-experi.jpg', interpolate=True, mask=None, maskParams=None, name='instruccion_3', opacity=1, ori=0.0, pos=array([0., 0.]), size=array([1.8, 1. ]), texRes=128.0, units='height', win=Window(...))
+9.5693 	EXP 	Sound soundEst set volume 1.000
+9.5744 	EXP 	Created instr = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instr', opacity=1, ori=0, pos=array([0.  , 0.25]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.5755 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text', opacity=1, ori=0, pos=array([ 0.  , -0.25]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.5921 	EXP 	Created text_3 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color=array([-1., -1., -1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_3', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+9.6123 	EXP 	image_2: autoDraw = True
+14.2230 	DATA 	Mouse: Left button down, pos=(1279,286)
+14.4232 	DATA 	Mouse:  Left button up, pos=(1279,286)
+16.6249 	EXP 	image_2: autoDraw = False
+16.6249 	EXP 	instruccion: autoDraw = True
+28.3889 	DATA 	Keypress: return
+28.4044 	EXP 	instruccion: autoDraw = False
+28.4044 	EXP 	instruccion_2: autoDraw = True
+32.7485 	EXP 	Imported cond.xlsx as conditions, 6 conditions, 1 params
+32.7488 	EXP 	Created sequence: random, trialTypes=6, nReps=1, seed=None
+32.7490 	EXP 	New trial (rep=0, index=0): {'soundEstimulus': 'estimulos/1.wav'}
+32.7513 	DATA 	Keypress: return
+32.7597 	EXP 	instruccion_2: autoDraw = False
+37.8983 	EXP 	testText: text = ''
+37.8983 	EXP 	testText: autoDraw = True
+37.8983 	EXP 	instr_2: autoDraw = True
+41.2355 	DATA 	Keypress: num_2
+41.2519 	EXP 	testText: height = 0.1
+41.2519 	EXP 	testText: height = 0.1
+41.2519 	EXP 	testText: text = '2'
+41.6692 	DATA 	Keypress: return
+41.6701 	EXP 	New trial (rep=0, index=1): {'soundEstimulus': 'estimulos/3.wav'}
+41.6857 	EXP 	testText: autoDraw = False
+41.6857 	EXP 	instr_2: autoDraw = False
+46.8081 	EXP 	testText: height = 0.1
+46.8081 	EXP 	testText: height = 0.1
+46.8081 	EXP 	testText: text = ''
+46.8081 	EXP 	testText: autoDraw = True
+46.8081 	EXP 	instr_2: autoDraw = True
+48.8103 	DATA 	Keypress: num_6
+48.8272 	EXP 	testText: height = 0.1
+48.8272 	EXP 	testText: height = 0.1
+48.8272 	EXP 	testText: text = '6'
+49.2108 	DATA 	Keypress: return
+49.2115 	EXP 	New trial (rep=0, index=2): {'soundEstimulus': 'estimulos/6.wav'}
+49.2280 	EXP 	testText: autoDraw = False
+49.2280 	EXP 	instr_2: autoDraw = False
+54.3498 	EXP 	testText: height = 0.1
+54.3498 	EXP 	testText: height = 0.1
+54.3498 	EXP 	testText: text = ''
+54.3498 	EXP 	testText: autoDraw = True
+54.3498 	EXP 	instr_2: autoDraw = True
+55.3342 	DATA 	Keypress: num_8
+55.3506 	EXP 	testText: height = 0.1
+55.3506 	EXP 	testText: height = 0.1
+55.3506 	EXP 	testText: text = '8'
+56.0683 	DATA 	Keypress: return
+56.0689 	EXP 	New trial (rep=0, index=3): {'soundEstimulus': 'estimulos/4.wav'}
+56.0848 	EXP 	testText: autoDraw = False
+56.0848 	EXP 	instr_2: autoDraw = False
+61.2071 	EXP 	testText: height = 0.1
+61.2071 	EXP 	testText: height = 0.1
+61.2071 	EXP 	testText: text = ''
+61.2071 	EXP 	testText: autoDraw = True
+61.2071 	EXP 	instr_2: autoDraw = True
+61.5082 	DATA 	Keypress: num_8
+61.5241 	EXP 	testText: height = 0.1
+61.5241 	EXP 	testText: height = 0.1
+61.5241 	EXP 	testText: text = '8'
+61.9080 	DATA 	Keypress: return
+61.9086 	EXP 	New trial (rep=0, index=4): {'soundEstimulus': 'estimulos/5.wav'}
+61.9246 	EXP 	testText: autoDraw = False
+61.9246 	EXP 	instr_2: autoDraw = False
+67.0468 	EXP 	testText: height = 0.1
+67.0468 	EXP 	testText: height = 0.1
+67.0468 	EXP 	testText: text = ''
+67.0468 	EXP 	testText: autoDraw = True
+67.0468 	EXP 	instr_2: autoDraw = True
+67.0470 	DATA 	Keypress: num_8
+67.0635 	EXP 	testText: height = 0.1
+67.0635 	EXP 	testText: height = 0.1
+67.0635 	EXP 	testText: text = '8'
+67.5642 	DATA 	Keypress: return
+67.5649 	EXP 	New trial (rep=0, index=5): {'soundEstimulus': 'estimulos/2.wav'}
+67.5807 	EXP 	testText: autoDraw = False
+67.5807 	EXP 	instr_2: autoDraw = False
+72.7030 	EXP 	testText: height = 0.1
+72.7030 	EXP 	testText: height = 0.1
+72.7030 	EXP 	testText: text = ''
+72.7030 	EXP 	testText: autoDraw = True
+72.7030 	EXP 	instr_2: autoDraw = True
+72.8032 	DATA 	Keypress: num_5
+72.8197 	EXP 	testText: height = 0.1
+72.8197 	EXP 	testText: height = 0.1
+72.8197 	EXP 	testText: text = '5'
+73.3539 	DATA 	Keypress: return
+73.3703 	EXP 	testText: autoDraw = False
+73.3703 	EXP 	instr_2: autoDraw = False
+73.3703 	EXP 	instruccion_3: autoDraw = True
+78.7144 	EXP 	Imported cond.xlsx as conditions, 6 conditions, 1 params
+78.7147 	EXP 	Created sequence: random, trialTypes=6, nReps=5, seed=None
+78.7149 	EXP 	New trial (rep=0, index=0): {'soundEstimulus': 'estimulos/5.wav'}
+78.7174 	DATA 	Keypress: return
+78.7262 	EXP 	instruccion_3: autoDraw = False
+83.8651 	EXP 	text: text = ''
+83.8651 	EXP 	instr: autoDraw = True
+83.8651 	EXP 	text: autoDraw = True
+84.1657 	DATA 	Keypress: num_8
+84.1823 	EXP 	text: height = 0.1
+84.1823 	EXP 	text: height = 0.1
+84.1823 	EXP 	text: text = '8'
+84.8831 	DATA 	Keypress: return
+84.8839 	EXP 	New trial (rep=0, index=1): {'soundEstimulus': 'estimulos/4.wav'}
+84.8997 	EXP 	instr: autoDraw = False
+84.8997 	EXP 	text: autoDraw = False
+90.0220 	EXP 	text: height = 0.1
+90.0220 	EXP 	text: height = 0.1
+90.0220 	EXP 	text: text = ''
+90.0220 	EXP 	instr: autoDraw = True
+90.0220 	EXP 	text: autoDraw = True
+90.2890 	DATA 	Keypress: num_8
+90.3055 	EXP 	text: height = 0.1
+90.3055 	EXP 	text: height = 0.1
+90.3055 	EXP 	text: text = '8'
+90.7396 	DATA 	Keypress: return
+90.7403 	EXP 	New trial (rep=0, index=2): {'soundEstimulus': 'estimulos/3.wav'}
+90.7561 	EXP 	instr: autoDraw = False
+90.7561 	EXP 	text: autoDraw = False
+95.8950 	EXP 	text: height = 0.1
+95.8950 	EXP 	text: height = 0.1
+95.8950 	EXP 	text: text = ''
+95.8950 	EXP 	instr: autoDraw = True
+95.8950 	EXP 	text: autoDraw = True
+96.1454 	DATA 	Keypress: num_7
+96.1620 	EXP 	text: height = 0.1
+96.1620 	EXP 	text: height = 0.1
+96.1620 	EXP 	text: text = '7'
+96.4958 	DATA 	Keypress: return
+96.4965 	EXP 	New trial (rep=0, index=3): {'soundEstimulus': 'estimulos/1.wav'}
+96.5124 	EXP 	instr: autoDraw = False
+96.5124 	EXP 	text: autoDraw = False
+101.6347 	EXP 	text: height = 0.1
+101.6347 	EXP 	text: height = 0.1
+101.6347 	EXP 	text: text = ''
+101.6347 	EXP 	instr: autoDraw = True
+101.6347 	EXP 	text: autoDraw = True
+101.9684 	DATA 	Keypress: num_3
+101.9849 	EXP 	text: height = 0.1
+101.9849 	EXP 	text: height = 0.1
+101.9849 	EXP 	text: text = '3'
+102.2854 	DATA 	Keypress: return
+102.2861 	EXP 	New trial (rep=0, index=4): {'soundEstimulus': 'estimulos/6.wav'}
+102.3020 	EXP 	instr: autoDraw = False
+102.3020 	EXP 	text: autoDraw = False
+104.6550 	DATA 	Keypress: num_1
+107.4243 	EXP 	text: height = 0.1
+107.4243 	EXP 	text: height = 0.1
+107.4243 	EXP 	text: text = ''
+107.4243 	EXP 	instr: autoDraw = True
+107.4243 	EXP 	text: autoDraw = True
+107.7581 	DATA 	Keypress: num_1
+107.7746 	EXP 	text: height = 0.1
+107.7746 	EXP 	text: height = 0.1
+107.7746 	EXP 	text: text = '1'
+107.9083 	DATA 	Keypress: num_0
+107.9249 	EXP 	text: height = 0.1
+107.9249 	EXP 	text: height = 0.1
+107.9249 	EXP 	text: text = '10'
+108.4100 	DATA 	Keypress: return
+108.4261 	EXP 	New trial (rep=0, index=5): {'soundEstimulus': 'estimulos/2.wav'}
+108.4420 	EXP 	instr: autoDraw = False
+108.4420 	EXP 	text: autoDraw = False
+113.5643 	EXP 	text: height = 0.1
+113.5643 	EXP 	text: height = 0.1
+113.5643 	EXP 	text: text = ''
+113.5643 	EXP 	instr: autoDraw = True
+113.5643 	EXP 	text: autoDraw = True
+114.2652 	DATA 	Keypress: num_4
+114.2818 	EXP 	text: height = 0.1
+114.2818 	EXP 	text: height = 0.1
+114.2818 	EXP 	text: text = '4'
+114.8993 	DATA 	Keypress: return
+114.9000 	EXP 	New trial (rep=1, index=0): {'soundEstimulus': 'estimulos/4.wav'}
+114.9157 	EXP 	instr: autoDraw = False
+114.9157 	EXP 	text: autoDraw = False
+120.0381 	EXP 	text: height = 0.1
+120.0381 	EXP 	text: height = 0.1
+120.0381 	EXP 	text: text = ''
+120.0381 	EXP 	instr: autoDraw = True
+120.0381 	EXP 	text: autoDraw = True
+120.4888 	DATA 	Keypress: num_8
+120.5057 	EXP 	text: height = 0.1
+120.5057 	EXP 	text: height = 0.1
+120.5057 	EXP 	text: text = '8'
+120.9058 	DATA 	Keypress: return
+120.9064 	EXP 	New trial (rep=1, index=1): {'soundEstimulus': 'estimulos/6.wav'}
+120.9224 	EXP 	instr: autoDraw = False
+120.9224 	EXP 	text: autoDraw = False
+126.0446 	EXP 	text: height = 0.1
+126.0446 	EXP 	text: height = 0.1
+126.0446 	EXP 	text: text = ''
+126.0446 	EXP 	instr: autoDraw = True
+126.0446 	EXP 	text: autoDraw = True
+126.4787 	DATA 	Keypress: num_7
+126.4951 	EXP 	text: height = 0.1
+126.4951 	EXP 	text: height = 0.1
+126.4951 	EXP 	text: text = '7'
+127.0126 	DATA 	Keypress: return
+127.0134 	EXP 	New trial (rep=1, index=2): {'soundEstimulus': 'estimulos/3.wav'}
+127.0290 	EXP 	instr: autoDraw = False
+127.0290 	EXP 	text: autoDraw = False
+132.1513 	EXP 	text: height = 0.1
+132.1513 	EXP 	text: height = 0.1
+132.1513 	EXP 	text: text = ''
+132.1513 	EXP 	instr: autoDraw = True
+132.1513 	EXP 	text: autoDraw = True
+132.5686 	DATA 	Keypress: num_6
+132.5851 	EXP 	text: height = 0.1
+132.5851 	EXP 	text: height = 0.1
+132.5851 	EXP 	text: text = '6'
+133.2860 	DATA 	Keypress: return
+133.2867 	EXP 	New trial (rep=1, index=3): {'soundEstimulus': 'estimulos/5.wav'}
+133.3026 	EXP 	instr: autoDraw = False
+133.3026 	EXP 	text: autoDraw = False
+138.4248 	EXP 	text: height = 0.1
+138.4248 	EXP 	text: height = 0.1
+138.4248 	EXP 	text: text = ''
+138.4248 	EXP 	instr: autoDraw = True
+138.4248 	EXP 	text: autoDraw = True
+138.9088 	DATA 	Keypress: num_7
+138.9255 	EXP 	text: height = 0.1
+138.9255 	EXP 	text: height = 0.1
+138.9255 	EXP 	text: text = '7'
+139.8766 	DATA 	Keypress: return
+139.8773 	EXP 	New trial (rep=1, index=4): {'soundEstimulus': 'estimulos/2.wav'}
+139.8930 	EXP 	instr: autoDraw = False
+139.8930 	EXP 	text: autoDraw = False
+145.0320 	EXP 	text: height = 0.1
+145.0320 	EXP 	text: height = 0.1
+145.0320 	EXP 	text: text = ''
+145.0320 	EXP 	instr: autoDraw = True
+145.0320 	EXP 	text: autoDraw = True
+145.4494 	DATA 	Keypress: num_5
+145.4658 	EXP 	text: height = 0.1
+145.4658 	EXP 	text: height = 0.1
+145.4658 	EXP 	text: text = '5'
+146.0835 	DATA 	Keypress: return
+146.0841 	EXP 	New trial (rep=1, index=5): {'soundEstimulus': 'estimulos/1.wav'}
+146.0998 	EXP 	instr: autoDraw = False
+146.0998 	EXP 	text: autoDraw = False
+151.2222 	EXP 	text: height = 0.1
+151.2222 	EXP 	text: height = 0.1
+151.2222 	EXP 	text: text = ''
+151.2222 	EXP 	instr: autoDraw = True
+151.2222 	EXP 	text: autoDraw = True
+151.4893 	DATA 	Keypress: num_2
+151.5058 	EXP 	text: height = 0.1
+151.5058 	EXP 	text: height = 0.1
+151.5058 	EXP 	text: text = '2'
+151.7897 	DATA 	Keypress: return
+151.7904 	EXP 	New trial (rep=2, index=0): {'soundEstimulus': 'estimulos/1.wav'}
+151.8061 	EXP 	instr: autoDraw = False
+151.8061 	EXP 	text: autoDraw = False
+156.9284 	EXP 	text: height = 0.1
+156.9284 	EXP 	text: height = 0.1
+156.9284 	EXP 	text: text = ''
+156.9284 	EXP 	instr: autoDraw = True
+156.9284 	EXP 	text: autoDraw = True
+157.2957 	DATA 	Keypress: num_2
+157.3121 	EXP 	text: height = 0.1
+157.3121 	EXP 	text: height = 0.1
+157.3121 	EXP 	text: text = '2'
+157.6793 	DATA 	Keypress: return
+157.6800 	EXP 	New trial (rep=2, index=1): {'soundEstimulus': 'estimulos/3.wav'}
+157.6960 	EXP 	instr: autoDraw = False
+157.6960 	EXP 	text: autoDraw = False
+162.8181 	EXP 	text: height = 0.1
+162.8181 	EXP 	text: height = 0.1
+162.8181 	EXP 	text: text = ''
+162.8181 	EXP 	instr: autoDraw = True
+162.8181 	EXP 	text: autoDraw = True
+163.4356 	DATA 	Keypress: num_4
+163.4522 	EXP 	text: height = 0.1
+163.4522 	EXP 	text: height = 0.1
+163.4522 	EXP 	text: text = '4'
+164.0029 	DATA 	Keypress: return
+164.0035 	EXP 	New trial (rep=2, index=2): {'soundEstimulus': 'estimulos/5.wav'}
+164.0194 	EXP 	instr: autoDraw = False
+164.0194 	EXP 	text: autoDraw = False
+169.1418 	EXP 	text: height = 0.1
+169.1418 	EXP 	text: height = 0.1
+169.1418 	EXP 	text: text = ''
+169.1418 	EXP 	instr: autoDraw = True
+169.1418 	EXP 	text: autoDraw = True
+169.7926 	DATA 	Keypress: num_7
+169.8091 	EXP 	text: height = 0.1
+169.8091 	EXP 	text: height = 0.1
+169.8091 	EXP 	text: text = '7'
+170.2764 	DATA 	Keypress: return
+170.2771 	EXP 	New trial (rep=2, index=3): {'soundEstimulus': 'estimulos/4.wav'}
+170.2930 	EXP 	instr: autoDraw = False
+170.2930 	EXP 	text: autoDraw = False
+175.4152 	EXP 	text: height = 0.1
+175.4152 	EXP 	text: height = 0.1
+175.4152 	EXP 	text: text = ''
+175.4152 	EXP 	instr: autoDraw = True
+175.4152 	EXP 	text: autoDraw = True
+175.7324 	DATA 	Keypress: num_8
+175.7490 	EXP 	text: height = 0.1
+175.7490 	EXP 	text: height = 0.1
+175.7490 	EXP 	text: text = '8'
+176.1996 	DATA 	Keypress: return
+176.2002 	EXP 	New trial (rep=2, index=4): {'soundEstimulus': 'estimulos/6.wav'}
+176.2162 	EXP 	instr: autoDraw = False
+176.2162 	EXP 	text: autoDraw = False
+181.3384 	EXP 	text: height = 0.1
+181.3384 	EXP 	text: height = 0.1
+181.3384 	EXP 	text: text = ''
+181.3384 	EXP 	instr: autoDraw = True
+181.3384 	EXP 	text: autoDraw = True
+181.9225 	DATA 	Keypress: num_9
+181.9390 	EXP 	text: height = 0.1
+181.9390 	EXP 	text: height = 0.1
+181.9390 	EXP 	text: text = '9'
+182.3563 	DATA 	Keypress: return
+182.3570 	EXP 	New trial (rep=2, index=5): {'soundEstimulus': 'estimulos/2.wav'}
+182.3729 	EXP 	instr: autoDraw = False
+182.3729 	EXP 	text: autoDraw = False
+187.4784 	EXP 	text: height = 0.1
+187.4784 	EXP 	text: height = 0.1
+187.4784 	EXP 	text: text = ''
+187.4784 	EXP 	instr: autoDraw = True
+187.4784 	EXP 	text: autoDraw = True
+187.9124 	DATA 	Keypress: num_4
+187.9290 	EXP 	text: height = 0.1
+187.9290 	EXP 	text: height = 0.1
+187.9290 	EXP 	text: text = '4'
+188.4129 	DATA 	Keypress: return
+188.4136 	EXP 	New trial (rep=3, index=0): {'soundEstimulus': 'estimulos/2.wav'}
+188.4296 	EXP 	instr: autoDraw = False
+188.4296 	EXP 	text: autoDraw = False
+193.5518 	EXP 	text: height = 0.1
+193.5518 	EXP 	text: height = 0.1
+193.5518 	EXP 	text: text = ''
+193.5518 	EXP 	instr: autoDraw = True
+193.5518 	EXP 	text: autoDraw = True
+193.8188 	DATA 	Keypress: num_3
+193.8355 	EXP 	text: height = 0.1
+193.8355 	EXP 	text: height = 0.1
+193.8355 	EXP 	text: text = '3'
+194.1193 	DATA 	Keypress: return
+194.1199 	EXP 	New trial (rep=3, index=1): {'soundEstimulus': 'estimulos/4.wav'}
+194.1357 	EXP 	instr: autoDraw = False
+194.1357 	EXP 	text: autoDraw = False
+199.2580 	EXP 	text: height = 0.1
+199.2580 	EXP 	text: height = 0.1
+199.2580 	EXP 	text: text = ''
+199.2580 	EXP 	instr: autoDraw = True
+199.2580 	EXP 	text: autoDraw = True
+199.7922 	DATA 	Keypress: num_5
+199.8086 	EXP 	text: height = 0.1
+199.8086 	EXP 	text: height = 0.1
+199.8086 	EXP 	text: text = '5'
+200.0757 	DATA 	Keypress: return
+200.0764 	EXP 	New trial (rep=3, index=2): {'soundEstimulus': 'estimulos/6.wav'}
+200.0923 	EXP 	instr: autoDraw = False
+200.0923 	EXP 	text: autoDraw = False
+205.2311 	EXP 	text: height = 0.1
+205.2311 	EXP 	text: height = 0.1
+205.2311 	EXP 	text: text = ''
+205.2311 	EXP 	instr: autoDraw = True
+205.2311 	EXP 	text: autoDraw = True
+205.6651 	DATA 	Keypress: num_7
+205.6817 	EXP 	text: height = 0.1
+205.6817 	EXP 	text: height = 0.1
+205.6817 	EXP 	text: text = '7'
+206.1990 	DATA 	Keypress: return
+206.1997 	EXP 	New trial (rep=3, index=3): {'soundEstimulus': 'estimulos/1.wav'}
+206.2156 	EXP 	instr: autoDraw = False
+206.2156 	EXP 	text: autoDraw = False
+211.3212 	EXP 	text: height = 0.1
+211.3212 	EXP 	text: height = 0.1
+211.3212 	EXP 	text: text = ''
+211.3212 	EXP 	instr: autoDraw = True
+211.3212 	EXP 	text: autoDraw = True
+211.7051 	DATA 	Keypress: num_2
+211.7216 	EXP 	text: height = 0.1
+211.7216 	EXP 	text: height = 0.1
+211.7216 	EXP 	text: text = '2'
+212.0055 	DATA 	Keypress: return
+212.0062 	EXP 	New trial (rep=3, index=4): {'soundEstimulus': 'estimulos/5.wav'}
+212.0219 	EXP 	instr: autoDraw = False
+212.0219 	EXP 	text: autoDraw = False
+217.1612 	EXP 	text: height = 0.1
+217.1612 	EXP 	text: height = 0.1
+217.1612 	EXP 	text: text = ''
+217.1612 	EXP 	instr: autoDraw = True
+217.1612 	EXP 	text: autoDraw = True
+217.5614 	DATA 	Keypress: num_8
+217.5781 	EXP 	text: height = 0.1
+217.5781 	EXP 	text: height = 0.1
+217.5781 	EXP 	text: text = '8'
+217.8785 	DATA 	Keypress: return
+217.8791 	EXP 	New trial (rep=3, index=5): {'soundEstimulus': 'estimulos/3.wav'}
+217.8950 	EXP 	instr: autoDraw = False
+217.8950 	EXP 	text: autoDraw = False
+223.0173 	EXP 	text: height = 0.1
+223.0173 	EXP 	text: height = 0.1
+223.0173 	EXP 	text: text = ''
+223.0173 	EXP 	instr: autoDraw = True
+223.0173 	EXP 	text: autoDraw = True
+223.6181 	DATA 	Keypress: num_7
+223.6347 	EXP 	text: height = 0.1
+223.6347 	EXP 	text: height = 0.1
+223.6347 	EXP 	text: text = '7'
+223.9351 	DATA 	Keypress: return
+223.9357 	EXP 	New trial (rep=4, index=0): {'soundEstimulus': 'estimulos/1.wav'}
+223.9517 	EXP 	instr: autoDraw = False
+223.9517 	EXP 	text: autoDraw = False
+229.0906 	EXP 	text: height = 0.1
+229.0906 	EXP 	text: height = 0.1
+229.0906 	EXP 	text: text = ''
+229.0906 	EXP 	instr: autoDraw = True
+229.0906 	EXP 	text: autoDraw = True
+229.4911 	DATA 	Keypress: num_2
+229.5078 	EXP 	text: height = 0.1
+229.5078 	EXP 	text: height = 0.1
+229.5078 	EXP 	text: text = '2'
+229.7748 	DATA 	Keypress: return
+229.7755 	EXP 	New trial (rep=4, index=1): {'soundEstimulus': 'estimulos/2.wav'}
+229.7914 	EXP 	instr: autoDraw = False
+229.7914 	EXP 	text: autoDraw = False
+234.9143 	EXP 	text: height = 0.1
+234.9143 	EXP 	text: height = 0.1
+234.9143 	EXP 	text: text = ''
+234.9143 	EXP 	instr: autoDraw = True
+234.9143 	EXP 	text: autoDraw = True
+235.1807 	DATA 	Keypress: num_3
+235.1973 	EXP 	text: height = 0.1
+235.1973 	EXP 	text: height = 0.1
+235.1973 	EXP 	text: text = '3'
+235.4826 	DATA 	Keypress: return
+235.4982 	EXP 	New trial (rep=4, index=2): {'soundEstimulus': 'estimulos/5.wav'}
+235.5143 	EXP 	instr: autoDraw = False
+235.5143 	EXP 	text: autoDraw = False
+240.6366 	EXP 	text: height = 0.1
+240.6366 	EXP 	text: height = 0.1
+240.6366 	EXP 	text: text = ''
+240.6366 	EXP 	instr: autoDraw = True
+240.6366 	EXP 	text: autoDraw = True
+241.0038 	DATA 	Keypress: num_9
+241.0203 	EXP 	text: height = 0.1
+241.0203 	EXP 	text: height = 0.1
+241.0203 	EXP 	text: text = '9'
+241.3374 	DATA 	Keypress: return
+241.3382 	EXP 	New trial (rep=4, index=3): {'soundEstimulus': 'estimulos/6.wav'}
+241.3541 	EXP 	instr: autoDraw = False
+241.3541 	EXP 	text: autoDraw = False
+246.4770 	EXP 	text: height = 0.1
+246.4770 	EXP 	text: height = 0.1
+246.4770 	EXP 	text: text = ''
+246.4770 	EXP 	instr: autoDraw = True
+246.4770 	EXP 	text: autoDraw = True
+247.1271 	DATA 	Keypress: num_1
+247.1436 	EXP 	text: height = 0.1
+247.1436 	EXP 	text: height = 0.1
+247.1436 	EXP 	text: text = '1'
+247.7111 	DATA 	Keypress: num_0
+247.7276 	EXP 	text: height = 0.1
+247.7276 	EXP 	text: height = 0.1
+247.7276 	EXP 	text: text = '10'
+248.0114 	DATA 	Keypress: return
+248.0122 	EXP 	New trial (rep=4, index=4): {'soundEstimulus': 'estimulos/4.wav'}
+248.0279 	EXP 	instr: autoDraw = False
+248.0279 	EXP 	text: autoDraw = False
+253.1502 	EXP 	text: height = 0.1
+253.1502 	EXP 	text: height = 0.1
+253.1502 	EXP 	text: text = ''
+253.1502 	EXP 	instr: autoDraw = True
+253.1502 	EXP 	text: autoDraw = True
+253.7010 	DATA 	Keypress: num_9
+253.7175 	EXP 	text: height = 0.1
+253.7175 	EXP 	text: height = 0.1
+253.7175 	EXP 	text: text = '9'
+254.0180 	DATA 	Keypress: return
+254.0187 	EXP 	New trial (rep=4, index=5): {'soundEstimulus': 'estimulos/3.wav'}
+254.0345 	EXP 	instr: autoDraw = False
+254.0345 	EXP 	text: autoDraw = False
+259.1402 	EXP 	text: height = 0.1
+259.1402 	EXP 	text: height = 0.1
+259.1402 	EXP 	text: text = ''
+259.1402 	EXP 	instr: autoDraw = True
+259.1402 	EXP 	text: autoDraw = True
+259.4573 	DATA 	Keypress: num_7
+259.4738 	EXP 	text: height = 0.1
+259.4738 	EXP 	text: height = 0.1
+259.4738 	EXP 	text: text = '7'
+259.7756 	DATA 	Keypress: return
+259.8075 	EXP 	instr: autoDraw = False
+259.8075 	EXP 	text: autoDraw = False
+259.8075 	EXP 	text_3: autoDraw = True
+261.0265 	DATA 	Keypress: return
+264.8130 	EXP 	text_3: autoDraw = False
+264.9190 	EXP 	window1: mouseVisible = True
