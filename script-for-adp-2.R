@@ -15,7 +15,7 @@ f2_1_10 <- ggplot(tabla.ind_1_10, aes(x=distancia, y =mrespuesta)) +
   scale_colour_manual(values = cbPalette) + 
   scale_fill_manual(values = cbPalette) + 
   scale_x_continuous(name="Distance source (m)", breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,6)) +
-  scale_y_continuous(name="Perceived distance (m)",  breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,6)) +
+  scale_y_continuous(name="Perceived distance (m)",  breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,20)) +
   facet_wrap(sujeto~.,ncol = 5)+ #scales="free_y")+
   theme_pubr(base_size = 12, margin = TRUE)+
   theme(legend.position = "top",
@@ -37,7 +37,7 @@ f2_11_20 <- ggplot(tabla.ind_11_20, aes(x=distancia, y =mrespuesta)) +
   scale_colour_manual(values = cbPalette) + 
   scale_fill_manual(values = cbPalette) + 
   scale_x_continuous(name="Distance source (m)", breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,6)) +
-  scale_y_continuous(name="Perceived distance (m)",  breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,6)) +
+  scale_y_continuous(name="Perceived distance (m)",  breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,20)) +
   facet_wrap(sujeto~.,ncol = 5)+ #scales="free_y")+
   theme_pubr(base_size = 12, margin = TRUE)+
   theme(legend.position = "top",
@@ -59,7 +59,7 @@ f2_21_30 <- ggplot(tabla.ind_21_30, aes(x=distancia, y =mrespuesta)) +
   scale_colour_manual(values = cbPalette) + 
   scale_fill_manual(values = cbPalette) + 
   scale_x_continuous(name="Distance source (m)", breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,6)) +
-  scale_y_continuous(name="Perceived distance (m)",  breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,6)) +
+  scale_y_continuous(name="Perceived distance (m)",  breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0,205)) +
   facet_wrap(sujeto~.,ncol = 5)+ #scales="free_y")+
   theme_pubr(base_size = 12, margin = TRUE)+
   theme(legend.position = "top",
