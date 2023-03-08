@@ -2,25 +2,25 @@ library(dplyr)
 library(tidyverse)
 
 filenames <- list.files(
-  path = "./data/online-pre-03-04-2023/data/csv/valid",
+  path = "./data/online-pre-03-04-2023/data/csv/data-internet/",
   pattern = "*.csv")
 
-headers <- names(read_csv("./data/online-pre-03-04-2023/data/csv/valid/001.csv"))
+headers <- names(read_csv("./data/online-pre-03-04-2023/data/csv/data-internet/001.csv"))
 
 data_participants_tbl <- do.call(rbind, 
                                  lapply(
-                                   paste0("./data/online-pre-03-04-2023/data/csv/valid/",
+                                   paste0("./data/online-pre-03-04-2023/data/csv/data-internet/",
                                           filenames),
                                    col_names = headers,
                                    read_csv, 
-                                   skip = 10, 
+                                   skip = 13, 
                                    n_max = 30,
                                    col_select = c("participant","trials.thisN","trials.thisIndex","typedWord"),
                                  ))
 
 data_participants_tbl <- data_participants_tbl %>%
-  mutate(participant = case_when(participant == "s002" ~ "002",
-                                 participant != "s002" ~ participant)) %>%
+#  mutate(participant = case_when(participant == "s002" ~ "002",
+#                                 participant != "s002" ~ participant)) %>%
   mutate(sujeto = paste0("S", participant))    %>%
   mutate(trial = trials.thisN+1) %>%
   mutate(distancia = case_when(
