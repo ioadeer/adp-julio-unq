@@ -3,13 +3,19 @@ library(ggpubr)
 library(ggplot2)
 library(dplyr)
 rm(list=ls())
-tabla.datos = read.csv("./data/datos.csv", header = TRUE, sep = '', stringsAsFactors = TRUE)
+tabla.datos = read.csv("./data/datos-de-internet-1.csv", header = TRUE, sep = '', stringsAsFactors = TRUE)
 
-tabla.datos <- tabla.datos %>% filter(!grepl('S002', sujeto))
+#tabla.datos <- tabla.datos %>% filter(!grepl('S002', sujeto))
 
-tabla.datos <- tabla.datos %>% filter(sujeto != 'S014' | trial != 5)
+# sacar sujeto 5 7 29 37
+tabla.datos <- tabla.datos %>% filter(!grepl('S005', sujeto))
+tabla.datos <- tabla.datos %>% filter(!grepl('S007', sujeto))
+tabla.datos <- tabla.datos %>% filter(!grepl('S029', sujeto))
+tabla.datos <- tabla.datos %>% filter(!grepl('S037', sujeto))
 
-figures_folder = "figuras"
+#tabla.datos <- tabla.datos %>% filter(sujeto != 'S014' | trial != 5)
+
+figures_folder = "figuras-internet"
 cbPalette <- c("#000000","#E69F00","#009E73", "#999999", "#D55E00", "#0072B2", "#CC79A7", "#F0E442")
 
 tabla.ind = tabla.datos%>% 
@@ -44,9 +50,8 @@ f2 <- ggplot(tabla.ind, aes(x=distancia, y =mrespuesta)) +
         legend.title = element_blank())
 
 plot(f2)
-mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "f1-individual", ".png", sep = '')
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "f1-individual-internet", ".png", sep = '')
 ggsave(mi_nombre_de_archivo, plot=f2, width=50, height=70, units="cm", limitsize=FALSE, dpi=300)
-
 
 
 f2 <- ggplot(tabla.pob, aes(x=distancia, y =Mrespuesta)) + 
@@ -66,6 +71,7 @@ f2 <- ggplot(tabla.pob, aes(x=distancia, y =Mrespuesta)) +
   theme(legend.position = "top",
         legend.title = element_blank())
 
+
 plot(f2)
-mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "f1-pob-serror", ".png", sep = '')
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "f1-pob-internet-se", ".png", sep = '')
 ggsave(mi_nombre_de_archivo, plot=f2, width=10, height=10, units="cm", limitsize=FALSE, dpi=300)
