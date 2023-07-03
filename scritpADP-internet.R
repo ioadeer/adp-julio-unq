@@ -50,7 +50,7 @@ f2 <- ggplot(tabla.ind, aes(x=distancia, y =mrespuesta)) +
         legend.title = element_blank())
 
 plot(f2)
-mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "f1-individual-internet", ".png", sep = '')
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "f1-individual-internet-2", ".png", sep = '')
 ggsave(mi_nombre_de_archivo, plot=f2, width=50, height=70, units="cm", limitsize=FALSE, dpi=300)
 
 

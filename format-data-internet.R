@@ -18,6 +18,12 @@ data_participants_tbl <- do.call(rbind,
                                    col_select = c("participant","trials.thisN","trials.thisIndex","typedWord"),
                                  ))
 
+library(tidyverse)
+library(ggpubr)
+library(rstatix)
+
+install.packages("rstatix")
+
 data_participants_tbl <- data_participants_tbl %>%
 #  mutate(participant = case_when(participant == "s002" ~ "002",
 #                                 participant != "s002" ~ participant)) %>%
