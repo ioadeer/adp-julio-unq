@@ -1,4 +1,6 @@
 
+install.packages("ggthemes")
+
 # Dependencias ------------------------------------------------------------
 library(dplyr)
 library(ggplot2)
@@ -17,132 +19,26 @@ library(ggstatsplot)
 library(gmodels)
 library(pracma)
 
+# TODO 
 
-# Load data  OLD---------------------------------------------------------------
-
-# Datos de participantes de internet
-tabla.internet = read.csv("./data/datos-de-internet-1.csv", header = TRUE, sep = '', stringsAsFactors = TRUE)
-# sacar sujeto 5 7 29 37
-tabla.internet <- tabla.raw %>% filter(!grepl('S005', sujeto))
-tabla.internet <- tabla.raw %>% filter(!grepl('S007', sujeto))
-tabla.internet <- tabla.raw %>% filter(!grepl('S029', sujeto))
-tabla.internet <- tabla.raw %>% filter(!grepl('S037', sujeto))
-
-tabla.internet <- tabla.internet %>%
-  mutate(nsub = as.numeric(gsub("[^0-9]", "", sujeto))) %>%
-  mutate(condicion = "INTERNET")
-
-tabla.internet <- tabla.internet[, -which(names(tabla.internet) == "sujeto")]
-
-# Datos de particpantes de aula 27
-
-tabla.sala_27  = read.csv("./data/datos.csv", header = TRUE, sep = '', stringsAsFactors = TRUE)
-
-# Le sumo 100 a los del aula 27 para no repetir nsub, numero de sujeto
-tabla.sala_27 <- tabla.sala_27 %>%
-  mutate(nsub = as.numeric(gsub("[^0-9]", "", sujeto))) %>%
-  mutate(nsub = nsub+100) %>%
-  mutate(condicion = "SALA")
-
-tabla.sala_27 <- tabla.sala_27[, -which(names(tabla.sala_27) == "sujeto")]
-
-# Junto sala 27 e internet
-
-experi_julio_tibble = rbind(tabla.internet, tabla.sala_27)
-
-write.table(experi_julio_tibble, file="./data/datos_internet_y_sala.csv", row.names = FALSE)
-
-# Load data NEW -----------------------------------------------------------
-
-tabla.raw = read.csv("./data/datos_internet_y_sala.csv", header = TRUE, sep = '', stringsAsFactors = TRUE)
-
-tabla.raw$SesgoAbs <-  tabla.raw$respuesta - tabla.raw$distancia
-tabla.raw$SesgoRel <- (tabla.raw$respuesta - tabla.raw$distancia) / tabla.raw$distancia
-
-# Remocion de outliers
-
-f_promedio <- function(x) c(mean = mean(x),
-                            sd   = sd(x),
-                            var  = var(x),
-                            sem  = sd(x)/sqrt(length(x)),
-                            n    = length(x))
-
-tabla.ind <- tibble(aggregate(cbind(respuesta,SesgoRel) ~ nsub*condicion*distancia,
-                              data = tabla.raw,
-                              FUN  = f_promedio,na.action = NULL))
-
-# - Nivel poblacional
-
-tabla.pob <- tibble(aggregate(cbind(respuesta[,"mean"],SesgoRel[,"mean"]) ~ condicion*distancia,
-                              data <- tabla.ind,
-                              FUN  <- f_promedio,na.action = NULL))
-
-tabla.pob = tabla.pob %>% rename(respuestapob = V1)
-tabla.pob = tabla.pob %>% rename(sesgorelpob = V2)
-
-# Log Log
-tabla.ind <- tabla.ind %>% 
-  mutate(log_respuesta_mean = log(respuesta[,"mean"])) %>%
-  mutate(log_distancia = log(distancia))
-
-# Remocion de outliers
-# Original
-#res3 <- outliers_mad(x = filter(tabla_ADP.ind.Blind.VR,Bloque == "verbal report" & BlindCat == "Blind")$mSesgoRel ,na.rm=TRUE)
-#plot_outliers_mad(res3,x=tabla_ADP.ind.Blind.VR$mSesgoRel,pos_display=TRUE)
-#tabla_ADP.ind.Blind.VR[res3$outliers_pos,]
-
-# Remocion de outliers de sujetos de internet
-
-tabla.outlier <- tabla.ind %>% 
-  #filter(Bloque == "verbal report" & BlindCat == "Blind") %>% 
-  group_by(nsub, condicion) %>%
-  summarise(mSesgoRel  = mean(SesgoRel[,"mean"],na.rm=TRUE))  %>%
-  ungroup()
-
-res3 <- outliers_mad(x = filter(tabla.outlier,condicion == 'INTERNET')$mSesgoRel ,na.rm=TRUE)
-
-plot_outliers_mad(res3,x=filter(tabla.outlier,condicion == 'INTERNET')$mSesgoRel,pos_display=TRUE)
-
-
-res3$outliers_pos
-
-res3
-
-# Outliers de Internet
-# 5  7  8 17 29 37
-
-# Remocion de outliers de sujetos de SALA 27
-
-res3 <- outliers_mad(x = filter(tabla.outlier,condicion == 'SALA')$mSesgoRel ,na.rm=TRUE)
-
-plot_outliers_mad(res3,x=filter(tabla.outlier,condicion == 'SALA')$mSesgoRel,pos_display=TRUE)
-
-res3$outliers_pos
-
-res3
-# Outliers de Internet
-# 2 14
-# Ojo como sume 100 a los nsub de sala internet eso queda como:
-# nsub 102 y 114
-
-# Removiendo outliers...
-
-removal_list = c("5", "7","8","17","29","37","102","114")
-experi_julio_tibble <- tabla.raw %>%
-  filter(!nsub %in% removal_list)
-
-write.table(experi_julio_tibble, file="./data/datos_internet_y_sala_sin_outliers.csv", row.names = FALSE)
-
-
+# - curvas de distancia
+# - sesgo
+# - desviacion estandar intrasujeto (variabilidad entre trails) sacar promedio y sd de repuestas para mismo trials. ver la distinta variabilidad para la distintas posiciones.
+# - Desviacion estandar en promedio
+# - Variabilidad entre sujetos comparando condiciones aula vs internet
+# - collapsed standar deviation between subject 
 
 # Load data Latest - sin outliers -----------------------------------------
-
-
 
 tabla.raw = read.csv("./data/datos_internet_y_sala_sin_outliers.csv", header = TRUE, sep = '', stringsAsFactors = TRUE)
 
 # Sacar trial 16 del nsub 15 porque respuesta esta mal 77 m
 # y el resto de repsuestas son normales
+
+# volamos a este sujeto que respondio mucho cero y me caga 
+# hacer una regresion log log
+tabla.raw <- tabla.raw %>%
+  filter(!nsub == 121)
 
 tabla.raw <- tabla.raw %>%
   filter(!(trial == 16 & nsub == 15))
@@ -275,6 +171,20 @@ mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "distancia_pobl
 ggsave(mi_nombre_de_archivo, plot=g2, width=10, height=10, units="cm", limitsize=FALSE, dpi=300)
 
 
+# Hacer una desviacion estandar ##
+
+g4 <- ggplot(tabla.pob, aes(x = distancia, y = respuestapob[,"sd"], color= condicion, group= condicion)) +
+  geom_point(size=3, stroke = 1) + geom_line(size = 3)+
+  geom_errorbar(data=tabla.pob, alpha = 1, width=0.2, size=1.1,
+                mapping=aes(ymin = respuestapob[,"sd"] - respuestapob[,"sem"],
+                            ymax = respuestapob[,"sd"] + respuestapob[,"sem"]))+
+  scale_x_continuous(name="Distance source (m)", breaks=c(1,2,3,4,5,6), labels=c(1,2,3,4,5,6), minor_breaks=NULL, limits = c(0.75,6.25)) +
+  scale_y_continuous(name="Standard deviation +/- SEM (m)",  breaks=c(0,1,2,3,4), labels=c(0,1,2,3,4), minor_breaks=NULL, limits = c(0,4)) 
+
+
+plot(g4)
+ggsave("Desviacion_estandard_masmenos_SEM.png", plot =g4, units="cm", limitsize=FALSE, dpi=200)
+
 ## Sesgo
 tabla_sesgo <- tabla.ind %>% 
   group_by(condicion,nsub) %>%
@@ -315,3 +225,159 @@ fig.sesgo <- ggplot(tabla_sesgo, aes(x = condicion,
 fig.sesgo
 mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "sesgo.png", sep = '')
 ggsave(mi_nombre_de_archivo, plot=fig.sesgo, width=10, height=10, units="cm", limitsize=FALSE, dpi=300)
+
+
+##
+# Falta collapsed standard deviation [%] between subject
+
+
+
+# Estadistica -------------------------------------------------------------
+
+
+# Both tasks
+tabla.ind <- tabla.ind %>% 
+  mutate(log_respuesta_mean = log(respuesta[,"mean"])) %>%
+  mutate(log_distancia = log(distancia))
+
+# LOG LOG
+m.distancia <- lmer(log_respuesta_mean ~ condicion * log_distancia + (1|nsub), 
+                    data = tabla.ind)
+
+summary(m.distancia)
+ggcoefstats(m.distancia, output = "tidy") %>% select(-label)
+
+anova(m.distancia)
+
+sink("./resultado_lmer_summary.txt")
+print(summary(m.distancia))
+sink() 
+
+sink("./resultado_lmer_anova.txt")
+print(anova(m.distancia))
+sink() 
+
+## Hacer regresion lineal por sujeto y despues graficar
+# Compresiones en boxplots
+
+por_sujeto <- tabla.ind %>%
+  group_by(nsub) %>%
+  nest()
+
+# asi tiene que ser
+# country_model <- function(df) {
+#   lm(lifeExp ~ year, data = df)
+# }
+modelo_sujeto <- function(df) {
+  lm(log_respuesta_mean ~ log_distancia, data = df)
+}
+
+#modelos <- map(por_sujeto$data, modelo_sujeto)
+
+library(modelr)
+library(purrr)
+
+por_sujeto <- por_sujeto %>%
+  mutate(model = map(data, modelo_sujeto))
+
+por_sujeto <- por_sujeto %>%
+  mutate(resids = map2(data, model, add_residuals))
+
+resids <- unnest(por_sujeto, resids)
+
+resids_modelr <- resids %>% 
+  ggplot(aes(log_distancia, resid)) +
+  geom_line(aes(group = nsub), alpha = 1 / 3) + 
+  geom_smooth(se = FALSE)
+
+model_modelr <- resids %>% 
+  ggplot(aes(log_distancia,log_respuesta_mean)) +
+  geom_line(aes(group = nsub), alpha = 1 / 3) + 
+  geom_smooth(se = FALSE)
+
+graphs <- ggarrange(model_modelr,resids_modelr,
+                    labels = c("A", "B"),
+                    ncol = 2, nrow = 1)
+plot(graphs)
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "adjust-and-resids_modelr.png", sep = '')
+mi_nombre_de_archivo = "adjust-and-resids_modelr.png"
+ggsave(mi_nombre_de_archivo, plot =graphs, dpi=200)
+
+por_sujeto_test <- por_sujeto %>%
+  mutate(sum = model[[1]][1]) %>%
+  mutate(intercept = sum[[1]][1]) %>%
+  mutate(slope = sum[[1]][2]) %>%
+
+por_sujeto_test_unnested <- unnest(por_sujeto_test,data)
+
+## Aca voy a hacer boxplot con pendientes
+
+slope_boxplot <- ggboxplot(por_sujeto_test_unnested, x ="condicion", y="slope")
+
+ggsave("boxplot_de_compresion.png", plot =slope_boxplot, dpi=200)
+
+plot(slope_boxplot)
+
+# Ajustes individuales
+
+por_sujeto_test_unnested %>% 
+  ggplot(aes(log_distancia, log_respuesta_mean)) +
+  geom_point(aes(y =log_respuesta_mean)) +
+  geom_abline(aes(intercept = intercept, slope = slope)) +
+  geom_smooth(se = FALSE)
+
+por_sujeto_test_unnested %>% 
+  ggplot(aes(log_distancia, log_respuesta_mean)) +
+  geom_point(aes(y =log_respuesta_mean)) +
+  geom_abline(aes(intercept = intercept, slope = slope)) +
+  geom_smooth(se = FALSE)
+
+# Ajustes individuales
+
+ajust_sub <- por_sujeto_test_unnested %>% 
+  ggplot(aes(log_distancia, log_respuesta_mean)) +
+  geom_abline(aes(intercept = intercept, slope = slope)) +
+  facet_grid(condicion ~ nsub) +
+  geom_smooth(se = FALSE)
+
+plot(ajust_sub)
+
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "ajuste_sub.png", sep = '')
+#ggsave(mi_nombre_de_archivo, plot = g1, width=44, height=14, units="cm", limitsize=FALSE, dpi=200)
+ggsave("ajustes_individuales.png", plot =ajust_sub, width=100, height=20, units="cm", limitsize=FALSE, dpi=200)
+
+# Histograma de exponentes de respuesta
+
+histograma_exponentes <- ggplot(por_sujeto_test_unnested, aes(x=slope)) +
+  geom_histogram(aes(y=..density..), position="identity", alpha=0.5)+
+  geom_density(alpha=0.6)+
+  # geom_vline(data=mean(mDist_perc), aes(xintercept=grp.mean, color=condicion_sala),
+  #             linetype="dashed")+
+  scale_color_manual(values=c("#999999", "#E69F00", "#56B4E9"))+
+  scale_fill_manual(values=c("#999999", "#E69F00", "#56B4E9"))+
+  labs(title="Respuesta histogram plot",x="Exponentes", y = "Density")+
+  theme_classic()
+
+plot(histograma_exponentes)
+
+#mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "histogramas_exponentes_sub.png", sep = '')
+ggsave("histograma_exponentes.png", plot =histograma_exponentes, dpi=200)
+
+por_sujeto_test_2 <- por_sujeto_test_unnested %>%
+  mutate(predi = predict(model[[1]]))
+
+por_sujeto_test_2 <- por_sujeto_test_2 %>%
+  mutate(predi_linear = exp(predi))
+
+predictions  <- por_sujeto_test_2 %>% 
+  ggplot(aes(distancia, predi_linear)) +
+  geom_point(aes(y =respuesta[,1])) +
+  facet_grid(condicion ~ nsub) +
+  geom_smooth(se = FALSE) +
+  labs(x="", y="", title ='Prediccion hecha con log log pasada lineal')
+
+plot(predictions)  
+
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "prediccion_lineal.png", sep = '')
+ggsave("predictions.png", plot =predictions, width=100, height=20, units="cm",limitsize=FALSE,  dpi=200)
+

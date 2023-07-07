@@ -1,0 +1,30 @@
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: log_respuesta_mean ~ condicion * log_distancia + (1 | nsub)
+   Data: tabla.ind
+
+REML criterion at convergence: 243.4
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-5.8051 -0.4255  0.0729  0.5948  2.2108 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ nsub     (Intercept) 0.2409   0.4908  
+ Residual             0.0679   0.2606  
+Number of obs: 348, groups:  nsub, 58
+
+Fixed effects:
+                             Estimate Std. Error        df t value Pr(>|t|)    
+(Intercept)                   0.55893    0.09662  73.42249   5.785 1.66e-07 ***
+condicionSALA                -0.18229    0.14161  73.42249  -1.287    0.202    
+log_distancia                 0.57911    0.03159 288.00000  18.334  < 2e-16 ***
+condicionSALA:log_distancia   0.21711    0.04629 288.00000   4.690 4.23e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) cnSALA lg_dst
+condicnSALA -0.682              
+log_distanc -0.358  0.245       
+cndcnSALA:_  0.245 -0.358 -0.682
