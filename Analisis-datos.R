@@ -150,14 +150,31 @@ ggsave(mi_nombre_de_archivo, plot = g1_sala, width=100, height=20, units="cm", l
 
 # Grafico poblacional con bruto ####
 
-g2 <- ggplot(filter(tabla.pob, condicion != "SALA_PARLANTES"), aes(x = distancia, y = respuestapob[,"mean"],color = condicion, group = condicion)) +
-  geom_errorbar(data=filter(tabla.pob, condicion != "SALA_PARLANTES"), alpha = 1, width=0.5, size=0.5,
+#sala  con sem <- filter(tabla.ind, condicion == 'INTERNET')
+g2 <- ggplot(tabla.pob, aes(x = distancia, y = respuestapob[,"mean"],color = condicion, group = condicion)) +
+  geom_errorbar(data=tabla.pob, alpha = 1, width=0.5, size=0.5,
                 mapping=aes(ymin = respuestapob[,"mean"] - respuestapob[,"sem"], 
                             ymax = respuestapob[,"mean"] + respuestapob[,"sem"]))+ 
   geom_point(size=1, stroke = 1) + geom_line(size = 3)+
   #geom_abline(intercept = 1, slope = 1,linetype="dashed") +       
-  scale_x_continuous(name="Distance source (m)", breaks=c(0,1,2,3,4,5,6,7,80), labels=c(0,1,2,3,4,5,6,7,8), minor_breaks=NULL, limits = c(0,8)) +
-  scale_y_continuous(name="Mean perceived distance +/- SEM (m)",  breaks=c(0,1,2,3,4,5,6,7,8), labels=c(0,1,2,3,4,5,6,7,8), minor_breaks=NULL, limits = c(0,8)) +
+  scale_x_continuous(name="Distance source (m)", breaks=c(0,1,2,3,4,5,6,7,80), labels=c(0,1,2,3,4,5,6,7,8), minor_breaks=NULL, limits = c(0,10)) +
+  scale_y_continuous(name="Mean perceived distance +/- SEM (m)",  breaks=c(0,1,2,3,4,5,6,7,8), labels=c(0,1,2,3,4,5,6,7,8), minor_breaks=NULL, limits = c(0,10)) +
+  # geom_jitter(data = filter(tabla.ind, condicion != "SALA_PARLANTES"), mapping = aes(x=distancia, y=respuesta[,"mean"],group=nsub, color = condicion), alpha=.8, size=0.7, stroke=.2,
+  #          position = position_jitter(width=.1, height=0))+
+  # geom_line(data = filter(tabla.ind, condicion != "SALA_PARLANTES"), mapping = aes(x=distancia, y=respuesta[,"mean"], group=nsub, color = condicion), alpha=.8, size=0.1)+
+  geom_abline(intercept = 0, slope = 1, linetype="dashed") +
+  # facet_grid(nsub~ .)+
+  theme_pubr(base_size = 9, margin = TRUE, legend = "right")
+
+#sala  con sd <- filter(tabla.ind, condicion == 'INTERNET')
+g2 <- ggplot(tabla.pob, aes(x = distancia, y = respuestapob[,"mean"],color = condicion, group = condicion)) +
+  geom_errorbar(data=tabla.pob, alpha = 1, width=0.5, size=0.5,
+                mapping=aes(ymin = respuestapob[,"mean"] - respuestapob[,"sd"], 
+                            ymax = respuestapob[,"mean"] + respuestapob[,"sd"]))+ 
+  geom_point(size=1, stroke = 1) + geom_line(size = 3)+
+  #geom_abline(intercept = 1, slope = 1,linetype="dashed") +       
+  scale_x_continuous(name="Distance source (m)", breaks=c(0,1,2,3,4,5,6,7,80), labels=c(0,1,2,3,4,5,6,7,8), minor_breaks=NULL, limits = c(0,10)) +
+  scale_y_continuous(name="Mean perceived distance +/- SD (m)",  breaks=c(0,1,2,3,4,5,6,7,8), labels=c(0,1,2,3,4,5,6,7,8), minor_breaks=NULL, limits = c(0,10)) +
   # geom_jitter(data = filter(tabla.ind, condicion != "SALA_PARLANTES"), mapping = aes(x=distancia, y=respuesta[,"mean"],group=nsub, color = condicion), alpha=.8, size=0.7, stroke=.2,
   #          position = position_jitter(width=.1, height=0))+
   # geom_line(data = filter(tabla.ind, condicion != "SALA_PARLANTES"), mapping = aes(x=distancia, y=respuesta[,"mean"], group=nsub, color = condicion), alpha=.8, size=0.1)+
