@@ -2,6 +2,32 @@
 # los datos del experimento. la obtencion de coeficientes por participantes
 # esta en el archivo coeficientes_por_sujeto.R
 
+# Dependencias ------------------------------------------------------------
+library(broom)
+library(broom.mixed)
+library(dplyr)
+library(ggbeeswarm)
+library(gmodels)
+library(ggplot2)
+library(ggthemes)
+library(ggpubr)
+library(ggstatsplot)
+library(gridExtra)
+library(htmlwidgets)
+library(quickpsy)
+library(tidyverse)
+library(lme4)
+library(nlme)
+library(lmerTest)
+library(modelr)
+library(scales) 
+library(pracma)
+library(plotly)
+library(Routliers)
+library(processx)
+library(rstatix)
+library(orca)
+
 
 # load data ---------------------------------------------------------------
 
@@ -157,10 +183,172 @@ all <- ggarrange(
 plot(all)
 
 
-# save plot a coeff -------------------------------------------------------
+# save plot a coeff a -------------------------------------------------------
 
 figures_folder = "./coeficientes_por_sujeto/figures/"
 mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "coefficient_a", ".png", sep = '')
+#ggsave(device = "png", mi_nombre_de_archivo, plot=main_figure, width=15, height=15, units="cm", limitsize=FALSE, dpi=600)
+
+## asi me lo guarda bien
+png(mi_nombre_de_archivo, res=600, units="cm", width=20, height=15)
+plot(all)
+dev.off()
+
+
+# intercept k (intercept) -----------------------------------------------
+
+
+data.clean.controlled <- data.clean %>%
+  filter(room_condition == "Controlled environment")
+
+eqn1 <- sprintf(
+  "M = %.3g ± %.2g \nMdn = %.3g (%.2g - %.2g)\nN =  %.2g",
+  mean(data.clean.controlled$intercept),
+  sd(data.clean.controlled$intercept),
+  median(data.clean.controlled$intercept),
+  quantile(data.clean.controlled$intercept)[4],
+  quantile(data.clean.controlled$intercept)[2],
+  sum(data.clean.controlled$intercept)
+)
+
+hist_a_sc <- ggplot(data.clean.controlled, aes(intercept)) +
+  geom_histogram(binwidth= 0.1, color="black",fill="white") +
+  scale_x_continuous(breaks= seq(-1,2.1, by=0.5)) +
+  scale_y_continuous(breaks= seq(0,7, by = 1))+
+  xlim(-1,2.1) +
+  ylim(0,7) +
+  geom_vline(xintercept = round(mean(data.clean.controlled$intercept),2),        # Add line for mean
+             linetype="dashed",
+  ) +
+  annotate("text",                        # Add text for mean
+           #x = 1.5, # para fig sola
+           x = 1.4, # para fig compuesta
+           y = 4.0,
+           label = eqn1,
+           size = 1.5,
+           hjust = 0) +
+  labs(x="k", y = "Count")+
+  theme(
+    legend.position="none",
+    #axis.line = element_blank(),
+    axis.title.x = element_blank(),
+    #axis.ticks = element_blank(),
+    axis.title.y = element_blank()) +
+  theme_minimal()
+
+#hist_a_sc
+
+# sala grande
+
+data.clean.unknown <- data.clean %>%
+  filter(room_condition == "Unknown environment")
+
+eqn1 <- sprintf(
+  "M = %.3g ± %.2g \nMdn = %.3g (%.2g - %.2g)\nN =  %.2g",
+  mean(data.clean.unknown$intercept),
+  sd(data.clean.unknown$intercept),
+  median(data.clean.unknown$intercept),
+  quantile(data.clean.unknown$intercept)[4],
+  quantile(data.clean.unknown$intercept)[2],
+  sum(data.clean.unknown$intercept)
+)
+
+
+# scale_x_continuous(breaks= seq(0.3,2.1, by=0.5)) +
+#   scale_y_continuous(breaks= seq(0,5, by = 1))+
+#   xlim(0.3,2) +
+#   ylim(0,5) +
+
+hist_a_sg <- ggplot(data.clean.unknown, aes(intercept)) +
+  geom_histogram(binwidth= 0.1, color="black",fill="white") +
+  geom_vline(xintercept = round(mean(data.clean.unknown$intercept),2),        # Add line for mean
+             linetype="dashed",
+  ) +
+  scale_x_continuous(breaks= seq(-1,2.1, by=0.5)) +
+  scale_y_continuous(breaks= seq(0,7, by = 1))+
+  xlim(-1,2.1) +
+  ylim(0,7) +
+  annotate("text",                        # Add text for mean
+           #x = 1.5, # para fig sola
+           x = 1.4, # para fig compuesta
+           y = 4.0,
+           label = eqn1,
+           size = 1.5,
+           hjust = 0) +
+  labs(x="k", y = "Count")+
+  theme(
+    legend.position="none",
+    #axis.line = element_blank(),
+    axis.title.x = element_blank(),
+    #axis.ticks = element_blank(),
+    axis.title.y = element_blank()) +
+  theme_minimal()
+
+#hist_a_sg
+
+# a_comp <- ggarrange(
+#   hist_a_sc,
+#   hist_a_sg,
+#   nrow = 2
+# )
+
+#plot(a_comp)
+
+# histograma a apaisado
+data.clean.boxplot_k <- data.clean %>%
+  mutate(
+    room_condition = case_when(
+      room_condition == "Controlled environment" ~ "Controlled",
+      room_condition == "Unknown environment" ~ "Unknown",
+    )
+  )
+
+bxp <- ggboxplot(data.clean.boxplot_k, x = "room_condition", y = "intercept",
+                 orientation = "horizontal",
+                 color = "room_condition", palette = "jco",
+                 add = "jitter", ylab="k",
+                 title="T-test k") +
+  theme_minimal() +
+  theme(
+    legend.position="none",
+    #axis.line = element_blank(),
+    axis.title.x = element_blank(),
+    #axis.title = element_text(hjust = 0),
+    #axis.ticks = element_blank(),
+    axis.title.y = element_blank())
+
+
+stat.test <- data.clean.boxplot_k  %>% 
+  t_test(intercept~room_condition) %>%
+  add_significance()
+
+stat.test <- stat.test %>% add_y_position(fun ="mean", step.increase = 3)
+
+bxp <- bxp + stat_pvalue_manual(
+  stat.test, label = "p", tip.length = 0.01,
+  coord.flip = TRUE
+) +
+  coord_flip()
+
+#bxp
+
+all <- ggarrange(
+  bxp,
+  ggarrange(
+    hist_a_sc, 
+    hist_a_sg,
+    nrow = 2
+  ),
+  ncol = 2
+)
+
+plot(all)
+
+
+# save plot a coeff k -------------------------------------------------------
+
+figures_folder = "./coeficientes_por_sujeto/figures/"
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "coefficient_k", ".png", sep = '')
 #ggsave(device = "png", mi_nombre_de_archivo, plot=main_figure, width=15, height=15, units="cm", limitsize=FALSE, dpi=600)
 
 ## asi me lo guarda bien
