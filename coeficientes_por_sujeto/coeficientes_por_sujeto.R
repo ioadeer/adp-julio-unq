@@ -32,7 +32,7 @@ library(rstatix)
 
 tabla.raw <- read.csv('ResultsData/Dresults.csv', header = TRUE, sep = ',', stringsAsFactors = TRUE)
 
-# Extraccion de coeficientes con broom  -----------  
+# Preparacion de datos -----------  
 # https://cran.r-project.org/web/packages/broom/vignettes/broom.html
 #  https://cran.r-project.org/web/packages/broom/vignettes/broom_and_dplyr.html
 
@@ -49,6 +49,10 @@ tabla.ind <- tabla.raw %>%
 modelo_sujeto  <- function(df) {
   lm(log_perc_dist ~ log_target_distance, data = df)
 }
+
+
+
+# Controlled environment (aula 27) ----------------------------------------
 
 tabla.ind.controlled <- tabla.ind %>%
   filter(room_condition == 'Controlled environment')
@@ -86,75 +90,29 @@ coefs.controlled <- regressions.controlled %>%
   spread(term,estimate) %>%
   select(subject,"(Intercept)", log_target_distance) %>%
   rename(intercept = "(Intercept)") %>%
-  group_by(nsub) %>%
+  group_by(subject) %>%
   summarise(
     intercept = max(intercept, na.rm =T),
-    coef = max(log_distancia, na.rm =T),
+    coef = max(log_target_distance, na.rm =T),
   )
 
-coefs.oscuras <- merge(x=coefs.oscuras, y=r_sqrd.oscuras, by='nsub')
+coefs.controlled <- merge(x=coefs.controlled, y=r_sqrd.controlled, by='subject')
 
-coefs.oscuras <- coefs.oscuras %>%
-  mutate(condicion_sala = "OSCURAS")
-
-tabla.ind.oscuras <- tabla.ind %>%
-  filter(condicion_sala == 'OSCURAS')
-
-regressions.oscuras <- tabla.ind.oscuras %>%
-  nest(data =  -nsub) %>%
-  mutate(
-    fit = map(data,modelo_sujeto),
-    tidied = map(fit, tidy),
-    glanced = map(fit, glance),
-    augmented = map(fit, augment)
-  )
-
-tidied.oscuras <- regressions.oscuras %>%
-  unnest(tidied)
-
-regressions.oscuras %>%
-  unnest(glanced)
-
-tidied.oscuras %>%
-  unnest(augmented)
-
-#
-# CORRECCION Guardarse el R^2 tambien
-
-r_sqrd.oscuras <- regressions.oscuras %>%
-  unnest(glanced) %>%
-  group_by(nsub) %>%
-  select(nsub, r.squared)
+coefs.controlled <- coefs.controlled %>%
+  mutate(room_condition = "Controlled environment")
 
 #
 # CORRECCION 2 Guardarse residuos
-# Esta al final
-
-#
-coefs.oscuras <- regressions.oscuras %>%
-  unnest(tidied) %>%
-  group_by(nsub) %>%
-  spread(term,estimate) %>%
-  select(nsub,"(Intercept)", log_distancia) %>%
-  rename(intercept = "(Intercept)") %>%
-  group_by(nsub) %>%
-  summarise(
-    intercept = max(intercept, na.rm =T),
-    coef = max(log_distancia, na.rm =T),
-  )
-
-coefs.oscuras <- merge(x=coefs.oscuras, y=r_sqrd.oscuras, by='nsub')
-
-coefs.oscuras <- coefs.oscuras %>%
-  mutate(condicion_sala = "OSCURAS")
 
 # VISUAL
 
-tabla.ind.visual <- tabla.ind %>%
-  filter(condicion_sala == 'VISUAL')
+# Unknown environment (INTERNET) ----------------------------------------------------------
 
-regressions.visual <- tabla.ind.visual %>%
-  nest(data =  -nsub) %>%
+tabla.ind.unknown <- tabla.ind %>%
+  filter(room_condition == 'Unknown environment')
+
+regressions.unknown <- tabla.ind.unknown %>%
+  nest(data =  -subject) %>%
   mutate(
     fit = map(data,modelo_sujeto),
     tidied = map(fit, tidy),
@@ -162,64 +120,71 @@ regressions.visual <- tabla.ind.visual %>%
     augmented = map(fit, augment)
   )
 
-tidied.visual <- regressions.visual %>%
+tidied.unknown <- regressions.unknown %>%
   unnest(tidied)
 
-regressions.visual %>%
+regressions.unknown %>%
   unnest(glanced)
 
-tidied.visual %>%
+regressions.unknown %>%
   unnest(augmented)
 
 #
 # CORRECCION Guardarse el R^2 tambien
 
-r_sqrd.visual <- regressions.visual %>%
+r_sqrd.unknown <- regressions.unknown %>%
   unnest(glanced) %>%
-  group_by(nsub) %>%
-  select(nsub, r.squared)
+  group_by(subject) %>%
+  select(subject, r.squared)
 
 #
-coefs.visual <- regressions.visual %>%
+coefs.unknown <- regressions.unknown %>%
   unnest(tidied) %>%
-  group_by(nsub) %>%
+  group_by(subject) %>%
   spread(term,estimate) %>%
-  select(nsub,"(Intercept)", log_distancia) %>%
+  select(subject,"(Intercept)", log_target_distance) %>%
   rename(intercept = "(Intercept)") %>%
-  group_by(nsub) %>%
+  group_by(subject) %>%
   summarise(
     intercept = max(intercept, na.rm =T),
-    coef = max(log_distancia, na.rm =T),
+    coef = max(log_target_distance, na.rm =T),
   )
 
-coefs.visual <- merge(x=coefs.visual, y=r_sqrd.visual, by='nsub')
+coefs.unknown <- merge(x=coefs.unknown, y=r_sqrd.unknown, by='subject')
 
-coefs.visual <- coefs.visual %>%
-  mutate(condicion_sala = "VISUAL")
-
-
-coefs.all <- rbind(coefs.oscuras, coefs.visual)
-
-write.table(coefs.all, file="analisis_control/data/coeficientes_por_sujeto_control.csv", row.names = FALSE)
+coefs.unknown <- coefs.unknown %>%
+  mutate(room_condition = "Unknown environment")
 
 
-#
+coefs.all <- rbind(coefs.unknown, coefs.controlled)
+
+
+
+# save data ---------------------------------------------------------------
+
+
+write.table(coefs.all, file="./data/coeficientes_por_sujeto_sin_outliers.csv", row.names = FALSE)
+
+
+
+# Residuals ---------------------------------------------------------------
+
 # CORRECCION 2 Guardarse residuos
-residuos.oscuras <- regressions.oscuras %>%
+residuos.controlled <- regressions.controlled %>%
   unnest(augmented) %>%
   select(-c(fit, tidied, data, glanced))
 
-residuos.oscuras['condicion_sala'] = 'OSCURAS'
+residuos.controlled['room_condition'] = 'Controlled environment'
 
-residuos.visual <- regressions.visual %>%
+residuos.unknown <- regressions.unknown %>%
   unnest(augmented) %>%
   select(-c(fit, tidied, data, glanced))
 
-residuos.visual['condicion_sala'] = 'VISUAL'
+residuos.unknown['room_condition'] = 'Unknown environment'
 
-residuos.all <- rbind(residuos.oscuras, residuos.visual)
+residuos.all <- rbind(residuos.controlled, residuos.unknown)
 
-write.table(residuos.all, file="analisis_control/data/fitted_model_residuals.csv", row.names = FALSE)
+write.table(residuos.all, file="data/coeficientes_fitted_model_residuals_sin_outliers.csv", row.names = FALSE)
 
 # unnest(glanced) %>%
 # group_by(nsub) %>%
