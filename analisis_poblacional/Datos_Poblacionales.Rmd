@@ -50,67 +50,47 @@ library(ggpubr)
 ```{r load_data, include = FALSE}
 # Importar los datos
 
-tabla.primer_exp <- read.csv("./data/Exp_1_demografico_50.csv", header = TRUE, sep = ' ', stringsAsFactors = TRUE)
-tabla.segundo_exp <- read.csv("./data/Exp_2_poblacional_20.csv", header = TRUE, sep = ' ', stringsAsFactors = TRUE)
-tabla.tercer_exp <- read.csv("./data/Exp_3_poblacional_20.csv", header = TRUE, sep = ' ', stringsAsFactors = TRUE)
+tabla.aula_27 <- read.csv("./data/aula-27-poblacional.csv", header = TRUE, sep = ',', stringsAsFactors = TRUE)
 
-tabla.primer_exp <- tabla.primer_exp %>%
-  mutate("exp" = 1)
+tabla.aula_27 <- tabla.aula_27 %>%
+  mutate("room_condition" = "Controlled environment")
 
-tabla.segundo_exp <- tabla.segundo_exp %>%
-  mutate("exp" = 2) %>%
+tabla.aula_27 <- rename(tabla.aula_27, sex = sexo)
+tabla.aula_27 <- rename(tabla.aula_27, subject = sujeto)
+tabla.aula_27 <- rename(tabla.aula_27, age = edad)
+
+tabla.aula_27 <- select(tabla.aula_27, c("subject", "sex","age", "room_condition"))
+
+
+tabla.internet <- read.csv("./data/interntet_procesado_con_outliers.csv", header = TRUE, sep = ',', stringsAsFactors = TRUE)
+
+tabla.internet <- tabla.internet %>%
   mutate(sex = case_when(
-      sex == "Masculino" ~ "M",
-      sex == "Femenino" ~ "F",
+      sex == "Hombre" ~ "M",
+      sex == "Mujer" ~ "F",
+      sex == "Otro" ~ "X"
     ) )
 
-tabla.segundo_exp <- select(tabla.segundo_exp, c("nsub",
-                        "age",
-                        "sex",
-                        "problemas_vision",
-                        "exp"
-                        ))
+tabla.internet <- select(tabla.internet, c("subject", "sex","age", "room_condition"))
 
-tabla.tercer_exp <- tabla.tercer_exp %>%
-  mutate("exp" = 3) %>%
-  mutate(sex = case_when(
-      sex == "Masculino" ~ "M",
-      sex == "Femenino" ~ "F",
-    ) )
-
-tabla.tercer_exp <- select(tabla.tercer_exp, c("nsub",
-                        "age",
-                        "sex",
-                        "problemas_vision",
-                        "exp"
-                        ))
-
-tabla.all <- do.call("rbind", list(tabla.primer_exp, tabla.segundo_exp, tabla.tercer_exp))
+tabla.all <- do.call("rbind", list(tabla.aula_27, tabla.internet))
 
 
 ```
 
 ## Poblacional de todos los experimentos.
 
-Participaron un total de `r count(tabla.all)` participantes de los tres experimentos. Hubo un total de `r count(filter(tabla.all, sex == 'F'))` mujeres y `r count(filter(tabla.all, sex == 'M'))` hombres.
-La edad promedio de todos los experimentos es `r format(mean(tabla.all$age), digits =4)` cubriendo un rango desde `r min(tabla.all$age)` hasta `r max(tabla.all$age)`. Del total de participantes,
-`r count(filter(tabla.all, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.all, problemas_vision == 'Si'))` usaban.
+Participaron un total de `r count(tabla.all)` participantes de los tres experimentos. Hubo un total de `r count(filter(tabla.all, sex == 'F'))` mujeres y `r count(filter(tabla.all, sex == 'M'))` hombres y `r count(filter(tabla.all, sex == 'M'))` otros.
+La edad promedio de todos los experimentos es `r format(mean(tabla.all$age), digits =4)` cubriendo un rango desde `r min(tabla.all$age)` hasta `r max(tabla.all$age)`.
 
 
-## Poblacional del experimento 1
+## Poblacional del experimento aula 27
 
-Participaron un total de `r count(tabla.primer_exp)` participantes del primer experimento. Hubo un total de `r count(filter(tabla.primer_exp, sex == 'F'))` mujeres y `r count(filter(tabla.primer_exp, sex == 'M'))` hombres. 
-La edad promedio es `r format(mean(tabla.primer_exp$age), digits =4)` cubriendo un rango desde `r min(tabla.primer_exp$age)` hasta `r max(tabla.primer_exp$age)`. Del total de participantes,
-`r count(filter(tabla.primer_exp, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.primer_exp, problemas_vision == 'Si'))` usaban.
+Participaron un total de `r count(tabla.aula_27)` participantes del primer experimento. Hubo un total de `r count(filter(tabla.aula_27, sex == 'F'))` mujeres y `r count(filter(tabla.aula_27, sex == 'M'))` hombres. 
+La edad promedio es `r format(mean(tabla.aula_27$age), digits =4)` cubriendo un rango desde `r min(tabla.aula_27$age)` hasta `r max(tabla.aula_27$age)`. 
 
-## Poblacional del experimento 2
+## Poblacional del experimento internet
 
-Participaron un total de `r count(tabla.segundo_exp)` participantes de segundo experimento. Hubo un total de `r count(filter(tabla.segundo_exp, sex == 'F'))` mujeres y `r count(filter(tabla.segundo_exp, sex == 'M'))` hombres. 
-La edad promedio es `r format(mean(tabla.segundo_exp$age), digits =4)` cubriendo un rango desde `r min(tabla.segundo_exp$age)` hasta `r max(tabla.segundo_exp$age)`. Del total de participantes,
-`r count(filter(tabla.segundo_exp, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.segundo_exp, problemas_vision == 'Si'))` usaban.
+Participaron un total de `r count(tabla.internet)` participantes de segundo experimento. Hubo un total de `r count(filter(tabla.internet, sex == 'F'))` mujeres y `r count(filter(tabla.internet, sex == 'M'))` hombres. 
+La edad promedio es `r format(mean(tabla.internet$age), digits =4)` cubriendo un rango desde `r min(tabla.internet$age)` hasta `r max(tabla.internet$age)`. 
 
-## Poblacional del experimento 3
-
-Participaron un total de `r count(tabla.tercer_exp)` participantes del tercer experimento. Hubo un total de `r count(filter(tabla.tercer_exp, sex == 'F'))` mujeres y `r count(filter(tabla.tercer_exp, sex == 'M'))` hombres. 
-La edad promedio del tercer experimento es `r format(mean(tabla.tercer_exp$age), digits =4)` cubriendo un rango desde `r min(tabla.tercer_exp$age)` hasta `r max(tabla.tercer_exp$age)`. Del total de participantes,
-`r count(filter(tabla.tercer_exp, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.tercer_exp, problemas_vision == 'Si'))` usaban.

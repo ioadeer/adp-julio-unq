@@ -1,0 +1,51 @@
+time,subject,name,age,sex,headphone_type,headphone_brand,musical_studies,hearing_issues,room_condition
+2022/10/25 6:41:51 p. m. GMT-3,2,Pablo Rodriguez,37,Hombre,Circumaurales (cubren la totalidad de la oreja),GameMax Auricular microfono Gamer RGB LED HG3500 PRO USB 7.1,No,No,Unknown environment
+2022/10/29 6:58:23 p. m. GMT-3,3,Luis Baigorria,80,Hombre,Circumaurales (cubren la totalidad de la oreja),PHILIPS TAUH202,Si,Si,Unknown environment
+2022/11/25 7:00:12 p. m. GMT-3,6,Orion Lopez,22,Otro,Intraurales (se introducen en el canal auditivo),,No,No,Unknown environment
+2022/10/24 5:29:28 p. m. GMT-3,7,Sabrina Ayala,29,Mujer,Intraurales (se introducen en el canal auditivo),Samsung (viene con el teléfono Samsung A31),No,No,Unknown environment
+2022/10/30 12:48:46 a. m. GMT-3,8,Rocío Ayala,22,Mujer,Circumaurales (cubren la totalidad de la oreja),Philips,Si,No,Unknown environment
+2022/11/06 10:37:07 a. m. GMT-3,9,Patricio Bertato,35,Hombre,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",SRH 145 Shure,Si,Si,Unknown environment
+2022/10/21 9:37:22 p. m. GMT-3,10,Agata Blanco,30,Mujer,Circumaurales (cubren la totalidad de la oreja),Auriculares Inalámbricos Logitech G Series G533,Si,No,Unknown environment
+2022/11/26 11:51:05 a. m. GMT-3,11,Irene Bond,37,Mujer,Intraurales (se introducen en el canal auditivo),Apple,No,No,Unknown environment
+2022/11/10 7:42:12 p. m. GMT-3,12,Aldana Calabrese,32,Mujer,Intraurales (se introducen en el canal auditivo),Motorola,No,No,Unknown environment
+2022/11/09 10:48:44 a. m. GMT-3,13,Guadalupe Cascallares,34,Mujer,Circumaurales (cubren la totalidad de la oreja),Motorola Pulse Escape,No,No,Unknown environment
+2022/11/07 4:39:25 p. m. GMT-3,14,Catalina Cepernic,26,Mujer,Intraurales (se introducen en el canal auditivo),Samsung,Si,No,Unknown environment
+2022/11/08 11:26:46 a. m. GMT-3,15,Joaquin Coco,22,Hombre,Intraurales (se introducen en el canal auditivo),Xiaomi redmi ,No,No,Unknown environment
+2022/11/08 11:24:36 p. m. GMT-3,16,María Victoria Coletto,39,Mujer,Circumaurales (cubren la totalidad de la oreja),Sennheiser exactos como los de la primer foto,No,No,Unknown environment
+2023/02/08 9:36:16 p. m. GMT-3,17,Lucia Curto,33,Mujer,Intraurales (se introducen en el canal auditivo),Motorola Earbuds,No,No,Unknown environment
+2022/11/01 6:25:24 p. m. GMT-3,18,felix davenport,19,Hombre,Abiertos (con rejilla u orificios para que el sonido entre y salga),AKG K52,Si,No,Unknown environment
+2023/02/09 5:12:29 p. m. GMT-3,19,Corina de la Peña,28,Otro,Circumaurales (cubren la totalidad de la oreja),Phillips,No,No,Unknown environment
+2022/11/07 3:50:05 p. m. GMT-3,20,Camila Dordoni Aller,24,Mujer,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",Genius HS-220U,No,No,Unknown environment
+2022/11/14 11:17:55 a. m. GMT-3,21,SANTIAGO LIONEL DUBINI,25,Hombre,Intraurales (se introducen en el canal auditivo),Auriculares Xiaomi Mi Earbuds Basic 2 Bhr4272gl Bluetooth,No,No,Unknown environment
+2022/11/07 7:44:24 p. m. GMT-3,22,Sheila Garade,31,Mujer,Intraurales (se introducen en el canal auditivo),JBL JBLENDURRUNBLK,No,No,Unknown environment
+2022/11/29 3:02:31 p. m. GMT-3,23,Paloma Gonzalez,24,Mujer,Circumaurales (cubren la totalidad de la oreja),JBL T500,No,No,Unknown environment
+2022/11/28 9:03:32 a. m. GMT-3,24,Carlos Lescano,37,Hombre,Circumaurales (cubren la totalidad de la oreja),Sennheiser HD202,No,No,Unknown environment
+2022/10/31 7:28:04 p. m. GMT-3,25,Miguel Vergara,75,Hombre,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",Logi,No,No,Unknown environment
+2022/11/09 2:12:37 p. m. GMT-3,26,Mateo Narvaez Zamora,29,Hombre,Intraurales (se introducen en el canal auditivo),liners shure,Si,No,Unknown environment
+2022/10/31 7:49:26 p. m. GMT-3,27,Nora Ferrari,71,Mujer,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",logi,No,No,Unknown environment
+2022/10/31 5:45:35 p. m. GMT-3,28,Nicolás Ezequiel Patiño ,33,Hombre,Circumaurales (cubren la totalidad de la oreja),Scarlett HP60,No,No,Unknown environment
+2022/11/07 5:52:10 p. m. GMT-3,30,Paula Piceda,44,Mujer,Circumaurales (cubren la totalidad de la oreja),Noga,No,No,Unknown environment
+2022/10/23 11:38:15 p. m. GMT-3,31,Rodrigo Rua,34,Hombre,Circumaurales (cubren la totalidad de la oreja),Audio Technica mod ATHM20x,No,No,Unknown environment
+2022/11/07 4:45:13 p. m. GMT-3,32,Giselle Salmun,56,Mujer,Intraurales (se introducen en el canal auditivo),,No,No,Unknown environment
+2022/11/07 1:44:43 a. m. GMT-3,33,Elías Sergiotti,22,Hombre,Intraurales (se introducen en el canal auditivo),Samsung ,No,No,Unknown environment
+2022/11/08 11:16:25 p. m. GMT-3,34,santiago spadaro,34,Hombre,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",genius HS-03U,No,No,Unknown environment
+2022/11/07 5:13:48 p. m. GMT-3,35,Isis Terraza,24,Mujer,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",Logitech,No,No,Unknown environment
+2023/02/08 9:56:01 p. m. GMT-3,36,Marcos Tonelli,35,Hombre,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",Energy Sistem,Si,No,Unknown environment
+2023/02/12 11:12:15 p. m. GMT-3,37,Pablo Torres,39,Hombre,Circumaurales (cubren la totalidad de la oreja),Audio Technica ATH-M20,Si,No,Unknown environment
+2023/11/22 3:57:34 p. m. GMT-3,,walter ogando,44,Hombre,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",maxell,No,No,Unknown environment
+2023/06/27 5:47:44 p. m. GMT-3,,Esteban Kowaljow,47,Hombre,Circumaurales (cubren la totalidad de la oreja),Kanji,No,No,Unknown environment
+2023/06/27 3:53:40 p. m. GMT-3,,Lucas Gonzalez,28,Hombre,Circumaurales (cubren la totalidad de la oreja),Tascam th-05,Si,No,Unknown environment
+2023/06/27 10:44:03 p. m. GMT-3,,Eugenia Ferrero,45,Mujer,Intraurales (se introducen en el canal auditivo),Baseus Encok W04 Pro,No,Si,Unknown environment
+2023/06/02 9:10:44 p. m. GMT-3,,Franco Medina,22,Hombre,Circumaurales (cubren la totalidad de la oreja),Samson,No,No,Unknown environment
+2023/05/31 8:45:06 p. m. GMT-3,,Kevin Abaca,24,Hombre,Circumaurales (cubren la totalidad de la oreja),HÜGEL ,Si,No,Unknown environment
+2023/05/06 2:01:03 p. m. GMT-3,,Carina Gomez,48,Mujer,Intraurales (se introducen en el canal auditivo),Samsung,No,No,Unknown environment
+2023/03/07 6:12:08 p. m. GMT-3,,JAVIER CERVIÑO,32,Hombre,Intraurales (se introducen en el canal auditivo),SAMSUNG,Si,No,Unknown environment
+2023/01/16 7:31:53 p. m. GMT-3,,Seba,35,Hombre,Circumaurales (cubren la totalidad de la oreja),Sony (linea económica),No,No,Unknown environment
+2022/11/25 12:12:58 a. m. GMT-3,,Juan Camilo Patiño,22,Hombre,Intraurales (se introducen en el canal auditivo),MINISO,No,No,Unknown environment
+2022/11/10 12:58:13 p. m. GMT-3,,belen biniez,35,Mujer,Intraurales (se introducen en el canal auditivo),,No,No,Unknown environment
+2022/11/10 11:30:47 a. m. GMT-3,,Maíl Galo,26,Hombre,Intraurales (se introducen en el canal auditivo),Jbl,No,No,Unknown environment
+2022/11/08 1:06:21 a. m. GMT-3,,Martin Guzman,32,Hombre,Intraurales (se introducen en el canal auditivo),Airpods cable,No,No,Unknown environment
+2022/11/07 7:51:35 p. m. GMT-3,,Dora sbarbati,64,Mujer,Intraurales (se introducen en el canal auditivo),,No,No,Unknown environment
+2022/11/07 3:34:08 p. m. GMT-3,,Aira valentina ,20,Mujer,Intraurales (se introducen en el canal auditivo),,No,No,Unknown environment
+2022/11/07 11:54:10 p. m. GMT-3,,Liliana Danalve ,52,Mujer,Intraurales (se introducen en el canal auditivo),,No,No,Unknown environment
+2022/10/31 8:10:27 p. m. GMT-3,,Cristobal Vergara.,12,Hombre,"Supraurales (cubren la mayor parte de la oreja, pero no toda)",logi,Si,No,Unknown environment
