@@ -1,0 +1,116 @@
+---
+title: "Datos poblacionales"
+author: "Joaquin Cervino"
+date: "2024-03-26"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Datos poblacionales
+
+Este R Markdown los hice para calcular los datos poblacionales de los tres experimentos.
+
+```{r dependencias, include = FALSE }
+library(broom)
+library(broom.mixed)
+library(dplyr)
+library(ggbeeswarm)
+library(gmodels)
+library(ggplot2)
+library(ggthemes)
+library(ggpubr)
+library(ggstatsplot)
+library(gridExtra)
+library(htmlwidgets)
+library(quickpsy)
+library(tidyverse)
+library(lme4)
+library(nlme)
+library(lmerTest)
+library(modelr)
+library(scales) 
+library(pracma)
+library(plotly)
+library(Routliers)
+library(processx)
+library(rstatix)
+library(orca)
+library(reshape2)
+library(ggpubr)
+```
+
+
+
+
+```{r load_data, include = FALSE}
+# Importar los datos
+
+tabla.primer_exp <- read.csv("./data/Exp_1_demografico_50.csv", header = TRUE, sep = ' ', stringsAsFactors = TRUE)
+tabla.segundo_exp <- read.csv("./data/Exp_2_poblacional_20.csv", header = TRUE, sep = ' ', stringsAsFactors = TRUE)
+tabla.tercer_exp <- read.csv("./data/Exp_3_poblacional_20.csv", header = TRUE, sep = ' ', stringsAsFactors = TRUE)
+
+tabla.primer_exp <- tabla.primer_exp %>%
+  mutate("exp" = 1)
+
+tabla.segundo_exp <- tabla.segundo_exp %>%
+  mutate("exp" = 2) %>%
+  mutate(sex = case_when(
+      sex == "Masculino" ~ "M",
+      sex == "Femenino" ~ "F",
+    ) )
+
+tabla.segundo_exp <- select(tabla.segundo_exp, c("nsub",
+                        "age",
+                        "sex",
+                        "problemas_vision",
+                        "exp"
+                        ))
+
+tabla.tercer_exp <- tabla.tercer_exp %>%
+  mutate("exp" = 3) %>%
+  mutate(sex = case_when(
+      sex == "Masculino" ~ "M",
+      sex == "Femenino" ~ "F",
+    ) )
+
+tabla.tercer_exp <- select(tabla.tercer_exp, c("nsub",
+                        "age",
+                        "sex",
+                        "problemas_vision",
+                        "exp"
+                        ))
+
+tabla.all <- do.call("rbind", list(tabla.primer_exp, tabla.segundo_exp, tabla.tercer_exp))
+
+
+```
+
+## Poblacional de todos los experimentos.
+
+Participaron un total de `r count(tabla.all)` participantes de los tres experimentos. Hubo un total de `r count(filter(tabla.all, sex == 'F'))` mujeres y `r count(filter(tabla.all, sex == 'M'))` hombres.
+La edad promedio de todos los experimentos es `r format(mean(tabla.all$age), digits =4)` cubriendo un rango desde `r min(tabla.all$age)` hasta `r max(tabla.all$age)`. Del total de participantes,
+`r count(filter(tabla.all, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.all, problemas_vision == 'Si'))` usaban.
+
+
+## Poblacional del experimento 1
+
+Participaron un total de `r count(tabla.primer_exp)` participantes del primer experimento. Hubo un total de `r count(filter(tabla.primer_exp, sex == 'F'))` mujeres y `r count(filter(tabla.primer_exp, sex == 'M'))` hombres. 
+La edad promedio es `r format(mean(tabla.primer_exp$age), digits =4)` cubriendo un rango desde `r min(tabla.primer_exp$age)` hasta `r max(tabla.primer_exp$age)`. Del total de participantes,
+`r count(filter(tabla.primer_exp, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.primer_exp, problemas_vision == 'Si'))` usaban.
+
+## Poblacional del experimento 2
+
+Participaron un total de `r count(tabla.segundo_exp)` participantes de segundo experimento. Hubo un total de `r count(filter(tabla.segundo_exp, sex == 'F'))` mujeres y `r count(filter(tabla.segundo_exp, sex == 'M'))` hombres. 
+La edad promedio es `r format(mean(tabla.segundo_exp$age), digits =4)` cubriendo un rango desde `r min(tabla.segundo_exp$age)` hasta `r max(tabla.segundo_exp$age)`. Del total de participantes,
+`r count(filter(tabla.segundo_exp, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.segundo_exp, problemas_vision == 'Si'))` usaban.
+
+## Poblacional del experimento 3
+
+Participaron un total de `r count(tabla.tercer_exp)` participantes del tercer experimento. Hubo un total de `r count(filter(tabla.tercer_exp, sex == 'F'))` mujeres y `r count(filter(tabla.tercer_exp, sex == 'M'))` hombres. 
+La edad promedio del tercer experimento es `r format(mean(tabla.tercer_exp$age), digits =4)` cubriendo un rango desde `r min(tabla.tercer_exp$age)` hasta `r max(tabla.tercer_exp$age)`. Del total de participantes,
+`r count(filter(tabla.tercer_exp, problemas_vision == 'No'))` no usaban anteojos, mientras que `r count(filter(tabla.tercer_exp, problemas_vision == 'Si'))` usaban.

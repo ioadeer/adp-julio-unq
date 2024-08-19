@@ -1,0 +1,258 @@
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,return,32.0355,,,,,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,return,12.4303,,,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,return,36.0574,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,return,14.7478,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,0,0,0,1,1,estimulos/2.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.5,0,1,1,0,1,estimulos/1.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,0,2,2,3,1,estimulos/4.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,0,3,3,4,1,estimulos/5.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,2,0,4,4,2,1,estimulos/3.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,2,0,5,5,5,1,estimulos/6.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,,,,,,,,return,9.2181,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,,,,,,estimulos/4.wav,,,0,0,0,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,0,1,1,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,0,2,2,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,0,3,3,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.8,,,,,,estimulos/1.wav,,,0,4,4,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,,,,,,estimulos/6.wav,,,0,5,5,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,1,0,6,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/6.wav,,,1,1,7,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,1,2,8,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.2,,,,,,estimulos/2.wav,,,1,3,9,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.6,,,,,,estimulos/1.wav,,,1,4,10,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/4.wav,,,1,5,11,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.8,,,,,,estimulos/1.wav,,,2,0,12,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,2,1,13,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/4.wav,,,2,2,14,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,2,3,15,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,2,4,16,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.3,,,,,,estimulos/6.wav,,,2,5,17,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.3,,,,,,estimulos/4.wav,,,3,0,18,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.3,,,,,,estimulos/5.wav,,,3,1,19,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.1,,,,,,estimulos/3.wav,,,3,2,20,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.6,,,,,,estimulos/1.wav,,,3,3,21,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.30,,,,,,estimulos/6.wav,,,3,4,22,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,3,5,23,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/4.wav,,,4,0,24,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,4,1,25,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.6,,,,,,estimulos/1.wav,,,4,2,26,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,4,3,27,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.8,,,,,,estimulos/6.wav,,,4,4,28,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,4,5,29,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,return,48.1368,,,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,return,51.1257,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,return,9.2708,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,return,15.7712,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,0,0,0,5,1,estimulos/6.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,0,1,1,4,1,estimulos/5.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,0,2,2,2,1,estimulos/3.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.5,0,3,3,0,1,estimulos/1.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.5,0,4,4,1,1,estimulos/2.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.5,0,5,5,3,1,estimulos/4.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,,,,,,,,return,7.7848,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.3,,,,,,estimulos/1.wav,,,0,0,0,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/4.wav,,,0,1,1,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/5.wav,,,0,2,2,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/2.wav,,,0,3,3,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/3.wav,,,0,4,4,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/6.wav,,,0,5,5,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/5.wav,,,1,0,6,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/3.wav,,,1,1,7,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/6.wav,,,1,2,8,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/4.wav,,,1,3,9,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/1.wav,,,1,4,10,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/2.wav,,,1,5,11,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/1.wav,,,2,0,12,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/3.wav,,,2,1,13,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/2.wav,,,2,2,14,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/4.wav,,,2,3,15,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/5.wav,,,2,4,16,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/6.wav,,,2,5,17,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/2.wav,,,3,0,18,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/4.wav,,,3,1,19,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/5.wav,,,3,2,20,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/3.wav,,,3,3,21,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/1.wav,,,3,4,22,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/6.wav,,,3,5,23,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/1.wav,,,4,0,24,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/6.wav,,,4,1,25,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/2.wav,,,4,2,26,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/4.wav,,,4,3,27,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/5.wav,,,4,4,28,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/3.wav,,,4,5,29,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,return,1.691,,,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,return,17.124,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,return,2.571,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,return,13.877,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,0,0,0,0,1,estimulos/1.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,0,1,1,2,1,estimulos/3.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,0,2,2,3,1,estimulos/4.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,0,3,3,4,1,estimulos/5.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,0,4,4,5,1,estimulos/6.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,0,5,5,1,1,estimulos/2.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,,,,,,,,return,3.314,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/4.wav,,,0,0,0,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/2.wav,,,0,1,1,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/3.wav,,,0,2,2,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,0,3,3,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/5.wav,,,0,4,4,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/6.wav,,,0,5,5,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/2.wav,,,1,0,6,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/6.wav,,,1,1,7,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/3.wav,,,1,2,8,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,1,3,9,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/5.wav,,,1,4,10,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/4.wav,,,1,5,11,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,6,,,,,,estimulos/4.wav,,,2,0,12,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/5.wav,,,2,1,13,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/2.wav,,,2,2,14,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/6.wav,,,2,3,15,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,2,4,16,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/3.wav,,,2,5,17,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/6.wav,,,3,0,18,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/2.wav,,,3,1,19,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/5.wav,,,3,2,20,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,3,3,21,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/3.wav,,,3,4,22,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/4.wav,,,3,5,23,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/2.wav,,,4,0,24,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/5.wav,,,4,1,25,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/3.wav,,,4,2,26,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/4.wav,,,4,3,27,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,6,,,,,,estimulos/6.wav,,,4,4,28,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,4,5,29,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,return,32.0355,,,,,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,return,12.4303,,,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,return,36.0574,,,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,return,14.7478,,,,,,,,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,0,0,0,1,1,estimulos/2.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.5,0,1,1,0,1,estimulos/1.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,0,2,2,3,1,estimulos/4.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,0,3,3,4,1,estimulos/5.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,2,0,4,4,2,1,estimulos/3.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,2,0,5,5,5,1,estimulos/6.wav,,,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,,,,,,,,return,9.2181,,,,,
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,,,,,,estimulos/4.wav,,,0,0,0,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,0,1,1,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,0,2,2,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,0,3,3,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.8,,,,,,estimulos/1.wav,,,0,4,4,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.5,,,,,,estimulos/6.wav,,,0,5,5,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,1,0,6,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/6.wav,,,1,1,7,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,1,2,8,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.2,,,,,,estimulos/2.wav,,,1,3,9,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.6,,,,,,estimulos/1.wav,,,1,4,10,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/4.wav,,,1,5,11,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.8,,,,,,estimulos/1.wav,,,2,0,12,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,2,1,13,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/4.wav,,,2,2,14,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,2,3,15,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,2,4,16,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.3,,,,,,estimulos/6.wav,,,2,5,17,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.3,,,,,,estimulos/4.wav,,,3,0,18,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.3,,,,,,estimulos/5.wav,,,3,1,19,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.1,,,,,,estimulos/3.wav,,,3,2,20,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.6,,,,,,estimulos/1.wav,,,3,3,21,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1.30,,,,,,estimulos/6.wav,,,3,4,22,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,3,5,23,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/4.wav,,,4,0,24,3,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/3.wav,,,4,1,25,2,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.6,,,,,,estimulos/1.wav,,,4,2,26,0,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/2.wav,,,4,3,27,1,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,0.8,,,,,,estimulos/6.wav,,,4,4,28,5,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,1,,,,,,estimulos/5.wav,,,4,5,29,4,1
+025.csv:Miguel Vergara,001,2022-10-31_19h18.32.784,audio-text-input,2022.2.2,Win32,59.37184587,,,,,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,return,48.1368,,,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,return,51.1257,,,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,return,9.2708,,,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,return,15.7712,,,,,,,,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,0,0,0,5,1,estimulos/6.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,0,1,1,4,1,estimulos/5.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,0,2,2,2,1,estimulos/3.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.5,0,3,3,0,1,estimulos/1.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.5,0,4,4,1,1,estimulos/2.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.5,0,5,5,3,1,estimulos/4.wav,,,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,,,,,,,,return,7.7848,,,,,
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,0.3,,,,,,estimulos/1.wav,,,0,0,0,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/4.wav,,,0,1,1,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/5.wav,,,0,2,2,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/2.wav,,,0,3,3,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/3.wav,,,0,4,4,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/6.wav,,,0,5,5,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/5.wav,,,1,0,6,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/3.wav,,,1,1,7,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/6.wav,,,1,2,8,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/4.wav,,,1,3,9,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/1.wav,,,1,4,10,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/2.wav,,,1,5,11,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/1.wav,,,2,0,12,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/3.wav,,,2,1,13,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/2.wav,,,2,2,14,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/4.wav,,,2,3,15,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/5.wav,,,2,4,16,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/6.wav,,,2,5,17,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/2.wav,,,3,0,18,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/4.wav,,,3,1,19,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/5.wav,,,3,2,20,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1.5,,,,,,estimulos/3.wav,,,3,3,21,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/1.wav,,,3,4,22,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/6.wav,,,3,5,23,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,1,,,,,,estimulos/1.wav,,,4,0,24,0,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/6.wav,,,4,1,25,5,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/2.wav,,,4,2,26,1,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/4.wav,,,4,3,27,3,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2.5,,,,,,estimulos/5.wav,,,4,4,28,4,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,2,,,,,,estimulos/3.wav,,,4,5,29,2,1
+027.csv:Nora Ferrari,001,2022-10-31_19h35.46.522,audio-text-input,2022.2.2,Win32,59.77286312,,,,,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,return,1.691,,,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,return,17.124,,,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,return,2.571,,,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,return,13.877,,,,,,,,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,0,0,0,0,1,estimulos/1.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,0,1,1,2,1,estimulos/3.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,0,2,2,3,1,estimulos/4.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,0,3,3,4,1,estimulos/5.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,0,4,4,5,1,estimulos/6.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,0,5,5,1,1,estimulos/2.wav,,,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,,,,,,,,return,3.314,,,,,
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/4.wav,,,0,0,0,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/2.wav,,,0,1,1,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/3.wav,,,0,2,2,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,0,3,3,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/5.wav,,,0,4,4,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/6.wav,,,0,5,5,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/2.wav,,,1,0,6,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/6.wav,,,1,1,7,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/3.wav,,,1,2,8,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,1,3,9,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/5.wav,,,1,4,10,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/4.wav,,,1,5,11,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,6,,,,,,estimulos/4.wav,,,2,0,12,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/5.wav,,,2,1,13,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/2.wav,,,2,2,14,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/6.wav,,,2,3,15,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,2,4,16,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/3.wav,,,2,5,17,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/6.wav,,,3,0,18,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/2.wav,,,3,1,19,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/5.wav,,,3,2,20,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,3,3,21,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/3.wav,,,3,4,22,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/4.wav,,,3,5,23,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,2,,,,,,estimulos/2.wav,,,4,0,24,1,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,3,,,,,,estimulos/5.wav,,,4,1,25,4,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,4,,,,,,estimulos/3.wav,,,4,2,26,2,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,5,,,,,,estimulos/4.wav,,,4,3,27,3,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,6,,,,,,estimulos/6.wav,,,4,4,28,5,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,1,,,,,,estimulos/1.wav,,,4,5,29,0,1
+028.csv:Patiño,001,2022-10-31_17h39.35.685,audio-text-input,2022.2.2,Win32,59.88023952,,,,,,,,,,,,,,,,,,,,,,
