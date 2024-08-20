@@ -22,6 +22,7 @@ library(webshot)
 library(officer)
 library(effects)
 
+
 results_tbl <- read.csv("./ResultsData/Dresults.csv", header = TRUE, sep = ',', stringsAsFactors = TRUE)
 
 cbPalette <- c("#000000","#E69F00","#009E73", "#999999", "#D55E00", "#0072B2", "#CC79A7", "#F0E442")
