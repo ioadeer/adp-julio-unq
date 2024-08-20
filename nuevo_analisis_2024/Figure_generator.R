@@ -22,8 +22,90 @@ library(webshot)
 library(officer)
 library(effects)
 
+rm(list=ls())
 
-results_tbl <- read.csv("./ResultsData/Dresults.csv", header = TRUE, sep = ',', stringsAsFactors = TRUE)
+results_tbl <- read.csv("../ResultsData/Dresults.csv", header = TRUE, sep = ',', stringsAsFactors = TRUE)
+
+tabla.raw <- read.csv("../ResultsData/bambu.csv", header = TRUE, sep = ',', stringsAsFactors = TRUE)
+tabla.raw$Distancia = tabla.raw$Dist_fis
+tabla.raw = select(tabla.raw, Trial, Respuesta, Sujeto, Bloque, Distancia )
+# tabla.bambu$SesgoRel <- (tabla.bambu$Respuesta - tabla.bambu$Distancia) / tabla.bambu$Distancia
+# tabla.bambu$SesgoAbs <-  abs(tabla.bambu$SesgoRel)
+
+tabla.raw$signedbias <- (tabla.raw$Respuesta - tabla.raw$Distancia) / tabla.raw$Distancia
+tabla.raw$unsignedbias <-  abs(tabla.raw$signedbias)
+
+tabla.ind = tabla.raw %>%
+  group_by(Sujeto,Distancia,Bloque) %>%
+  summarise(respuesta_ind = mean(Respuesta),
+            sd_respuesta_ind = sd(Respuesta),
+            sem_respuesta_ind = sd(Respuesta)/sqrt(n()))
+
+
+tabla.ind = tabla.ind %>% rename(perc_dist = respuesta_ind)
+tabla.ind = tabla.ind %>% rename(target_distance = Distancia)
+tabla.ind = tabla.ind %>% rename(subject = Sujeto)
+tabla.ind = tabla.ind %>% rename(room_condition = Bloque)
+tabla.ind$condition = factor(tabla.ind$room_condition, levels = c("VIRTUAL",
+                                                             "INDVIRTUAL",
+                                                             "REAL",
+                                                             "SIMULADO",
+                                                             "ABIERTO",
+                                                             "CERRADO"))
+levels(tabla.ind$room_condition) = c("Non-individualized HRTF",
+                                "Individualized HRTF",
+                                "Real speakers",
+                                "Simulated HRTF",
+                                "Incongruous room",
+                                "Closed headphones")
+
+tabla.ind = tabla.ind %>% rename(sd_perc_dist = sd_respuesta_ind)
+tabla.ind = tabla.ind %>% rename(sem_perc_dist = sem_respuesta_ind)
+
+results_tbl_bambu = tabla.ind
+results_tbl_bambu$logperc_dist = log10(results_tbl_bambu$perc_dist)
+results_tbl_bambu = filter(results_tbl_bambu, room_condition == "Non-individualized HRTF")
+rm("tabla.ind","tabla.bambu","tabla.raw")
+
+
+results_tbl = merge(results_tbl, results_tbl_bambu, all=TRUE)
+
+
+
+
+tabla.ind_sesgo = tabla.raw %>%
+  group_by(Sujeto,Bloque) %>%
+  summarise(signed_bias_ind = mean(signedbias),
+            sd_signed_bias_ind = sd(signedbias),
+            sem_signed_bias_ind = sd(signedbias)/sqrt(n()),
+            unsigned_bias_ind = abs(mean(signedbias)),
+            sd_unsigned_bias_ind = abs(sd(signedbias)),
+            sem_unsigned_bias_ind = abs(sd(signedbias)/sqrt(n())))
+
+
+tabla.ind_sesgo = tabla.ind_sesgo %>% rename(subject = Sujeto)
+tabla.ind_sesgo = tabla.ind_sesgo %>% rename(condition = Bloque)
+tabla.ind_sesgo$condition = factor(tabla.ind_sesgo$condition, levels = c("VIRTUAL",
+                                                                         "INDVIRTUAL",
+                                                                         "REAL",
+                                                                         "SIMULADO",
+                                                                         "ABIERTO",
+                                                                         "CERRADO"))
+levels(tabla.ind_sesgo$condition) = c("Non-individualized HRTF",
+                                      "Individualized HRTF",
+                                      "Real speakers",
+                                      "Simulated HRTF",
+                                      "Incongruous room",
+                                      "Closed headphones")
+
+
+results_tbl_bias = tabla.ind_sesgo
+
+rm("tabla.ind_sesgo")
+
+
+
+
 
 cbPalette <- c("#000000","#E69F00","#009E73", "#999999", "#D55E00", "#0072B2", "#CC79A7", "#F0E442")
 
@@ -84,7 +166,10 @@ eq1 <- substitute("Controlled environment:" ~~~ italic(y) == k %.% italic(X)^ita
                        a = round(mDist1stats$tidy_data$estimate[[2]], digits = 2)))
 eq2 <- substitute("Unknown environment:"~~~italic(y) == k %.% italic(X)^italic(a),
                   list(k = round(10^(mDist1stats$tidy_data$estimate[[1]]+mDist1stats$tidy_data$estimate[[3]]), digits = 2),
-                       a = round(mDist1stats$tidy_data$estimate[[2]]+mDist1stats$tidy_data$estimate[[4]], digits = 2)))
+                       a = round(mDist1stats$tidy_data$estimate[[2]]+mDist1stats$tidy_data$estimate[[5]], digits = 2)))
+eq3 <- substitute("Real environment:"~~~italic(y) == k %.% italic(X)^italic(a),
+                  list(k = round(10^(mDist1stats$tidy_data$estimate[[1]]+mDist1stats$tidy_data$estimate[[4]]), digits = 2),
+                       a = round(mDist1stats$tidy_data$estimate[[2]]+mDist1stats$tidy_data$estimate[[6]], digits = 2)))
 #eq3 <- substitute("r.squared:"~~~italic(R)^italic(2) == italic(b),
 #                  list(b = round(r.squaredGLMM(m.Dist1)[2], digits = 2)))
 eq1
@@ -114,6 +199,9 @@ f1 <- ggplot(tabla.pob, aes(x=target_distance, y =10^Mperc_dist, group = room_co
   geom_text(x = 0.2, y = 7.0, label = as.character(as.expression(eq2)), 
             hjust = 0, nudge_x =  0,parse = TRUE, size = 4, color = "#E69F00",
             family="Times New Roman")+
+  geom_text(x = 0.2, y = 6.0, label = as.character(as.expression(eq3)), 
+            hjust = 0, nudge_x =  0,parse = TRUE, size = 4, color = "#009E73",
+            family="Times New Roman")+
   #geom_text(x = 0.2, y = 6.0, label = as.character(as.expression(eq3)), hjust = 0, nudge_x =  0, parse = TRUE, size = 4, color = "#009E73")+
   scale_x_continuous(name="Distance source (m)", limits = c(0,10)) +
   scale_y_continuous(name="Perceived distance (m)",   limits = c(0,10)) +
@@ -124,6 +212,80 @@ f1 <- ggplot(tabla.pob, aes(x=target_distance, y =10^Mperc_dist, group = room_co
 
 
 f1
+
+
+##Analisis Post hoc de slope
+
+
+coefmodelpob = fixef(m.Dist1)
+coefmodelind = ranef(m.Dist1)
+a = levels(m.Dist1@frame$subject)
+b = coefmodelind$subject[[2]]
+table.slope = data.frame(a,b)
+table.model.data = m.Dist1@frame
+table.model.data = table.model.data %>% group_by(room_condition,subject)%>%
+  summarise(Mperc_dist  = mean(`log10(target_distance)`)) %>%
+  ungroup()
+
+table.slope = table.slope %>% rename(subject = a)
+table.slope = table.slope %>% rename(slope = b)
+table.slope = merge(table.model.data, table.slope, all=TRUE)
+table.slope <- table.slope %>%
+  select(-c(Mperc_dist))
+
+idx = table.slope$room_condition == "Controlled environment"
+table.slope[idx,]$slope = table.slope[idx,]$slope + coefmodelpob[[2]] 
+
+idx = table.slope$room_condition == "Unknown environment"
+table.slope[idx,]$slope = table.slope[idx,]$slope + coefmodelpob[[2]] +coefmodelpob[[5]]
+
+idx = table.slope$room_condition == "Non-individualized HRTF"
+table.slope[idx,]$slope = table.slope[idx,]$slope + coefmodelpob[[2]] +coefmodelpob[[6]]
+
+t.test(filter(table.slope, 
+              room_condition=="Unknown environment")$slope,
+       filter(table.slope, 
+              room_condition=="Non-individualized HRTF")$slope, 
+       paired = FALSE)
+
+
+
+results_tblp <- table.slope %>% 
+  group_by(room_condition) %>%
+  summarise(mslope  = mean(slope,na.rm=TRUE),
+            SDslope  = sd(slope,na.rm=TRUE)/sqrt(length(slope)))  %>%
+  ungroup()
+
+f2 =  ggplot(table.slope, aes(x = room_condition,y = slope,colour = room_condition)) +
+  geom_point()+
+  # geom_pointrange(aes(x=room_condition, y=mslope, ymin=mslope-SDslope, ymax=mslope+SDslope),
+  #                 position = position_dodgenudge(direction = "split", width = 3.2), size = 1.2, shape = 0)+
+  # geom_line(position = position_dodgenudge(direction = "split", width = 3),size = 1.2, alpha=.5)+
+  # geom_line(data = results_tbl, mapping = aes(x = room_condition,y = slope, group = subject, colour = room_condition, fill = room_condition),alpha = 0.6)+
+  # geom_point(data = results_tbl, mapping = aes(x = room_condition,y = slope, colour = room_condition, fill = room_condition), size = 2.4,alpha = 1)+
+  # geom_violin(data = filter(results_tbl,type == "NORMAL"), mapping = aes(x = room_condition,y = slope, colour = room_condition, fill = room_condition),
+  #                  position = position_nudge_center(x = .3,
+  #                    y = 0,
+  #                    center_x = 2,
+  #                    direction = "split",
+  #                    kept.origin = c("original", "none")),trim = FALSE, alpha = .2)+
+  scale_colour_manual(values = cbPalette) + 
+  scale_fill_manual(values = cbPalette) + 
+  geom_abline(slope = 0,
+              intercept = 0,
+              alpha = 0.5,
+              linetype = "dashed") +
+  labs(x = "room_condition", 
+       y = "Slope with LM") +
+  # facet_grid(. ~ type) +
+  annotate("text", x = 1.5, y = 2,  label = "***", size = 4) +
+  annotate("segment", x = 1, xend = 2, y = 1.9, yend = 1.9, colour = "black", size=.5, alpha=1,)+
+  theme_pubr(base_size = 12, margin = TRUE)+
+  theme(legend.position = "none")
+f2
+
+
+
 
 # signed bias -------------------------------------------------------------
 
