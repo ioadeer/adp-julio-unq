@@ -41,7 +41,7 @@ results_tbl <- read.csv("../ResultsData/Dresults.csv", header = TRUE, sep = ',',
 cbPalette <- c("#000000","#E69F00","#009E73", "#999999", "#D55E00", "#0072B2", "#CC79A7", "#F0E442")
 ```
 
-```{r make_model, include=FALSE}
+```{r make_model, echo=FALSE, warning=FALSE}
 # Primero INTRA SUJETOS
 # Primer modelo
 m.Dist1 <-  lmer(log10(perc_dist) ~ log10(target_distance)*room_condition+(1+log10(target_distance)|subject)+(0+room_condition|subject),

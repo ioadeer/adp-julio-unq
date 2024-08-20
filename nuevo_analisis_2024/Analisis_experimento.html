@@ -69,6 +69,97 @@ ul.task-list li input[type="checkbox"] {
 <section id="curva-de-distancia-y-resultados-estadisticos-del-modelo" class="level2">
 <h2 class="anchored" data-anchor-id="curva-de-distancia-y-resultados-estadisticos-del-modelo">Curva de distancia y resultados estadisticos del modelo</h2>
 <div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Number of labels is greater than default palette color count.
+• Select another color `palette` (and/or `package`).</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$subtitle_data
+NULL
+
+$caption_data
+NULL
+
+$pairwise_comparisons_data
+NULL
+
+$descriptive_data
+NULL
+
+$one_sample_data
+NULL
+
+$tidy_data
+# A tibble: 11 × 13
+   term                                                                        
+   &lt;fct&gt;                                                                       
+ 1 (Intercept)                                                                 
+ 2 log10(target_distance)                                                      
+ 3 room_conditionUnknown environment                                           
+ 4 log10(target_distance):room_conditionUnknown environment                    
+ 5 SD (Intercept)                                                              
+ 6 SD (log10(target_distance))                                                 
+ 7 SD (room_conditionControlled environment)                                   
+ 8 SD (room_conditionUnknown environment)                                      
+ 9 Cor (Intercept~log10(target_distance))                                      
+10 Cor (room_conditionControlled environment~room_conditionUnknown environment)
+11 SD (Observations)                                                           
+   estimate std.error conf.level conf.low conf.high statistic df.error   p.value
+      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+ 1   0.164     0.0376       0.95   0.0897    0.237       4.36      337  1.76e- 5
+ 2   0.796     0.0580       0.95   0.682     0.910      13.7       337  2.03e-34
+ 3   0.0792    0.0618       0.95  -0.0425    0.201       1.28      337  2.01e- 1
+ 4  -0.217     0.0793       0.95  -0.373    -0.0612     -2.74      337  6.49e- 3
+ 5   0.162    NA            0.95  NA        NA          NA          NA NA       
+ 6   0.272    NA            0.95  NA        NA          NA          NA NA       
+ 7   0.0838   NA            0.95  NA        NA          NA          NA NA       
+ 8   0.209    NA            0.95  NA        NA          NA          NA NA       
+ 9  -0.536    NA            0.95  NA        NA          NA          NA NA       
+10  -0.112    NA            0.95  NA        NA          NA          NA NA       
+11   0.0827   NA            0.95  NA        NA          NA          NA NA       
+   effect group      conf.method expression
+   &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;       &lt;list&gt;    
+ 1 fixed  ""         residual    &lt;language&gt;
+ 2 fixed  ""         residual    &lt;language&gt;
+ 3 fixed  ""         residual    &lt;language&gt;
+ 4 fixed  ""         residual    &lt;language&gt;
+ 5 random "subject"  residual    &lt;NULL&gt;    
+ 6 random "subject"  residual    &lt;NULL&gt;    
+ 7 random "subject"  residual    &lt;NULL&gt;    
+ 8 random "subject"  residual    &lt;NULL&gt;    
+ 9 random "subject"  residual    &lt;NULL&gt;    
+10 random "subject"  residual    &lt;NULL&gt;    
+11 random "Residual" residual    &lt;NULL&gt;    
+
+$glance_data
+# A tibble: 1 × 9
+    AIC  AICc   BIC R2_conditional R2_marginal   ICC   RMSE  Sigma expression  
+  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;list&gt;      
+1 1027. 1027. 1069.          0.896       0.504 0.789 0.0693 0.0827 &lt;expression&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           R2m       R2c
+[1,] 0.3581151 0.9257755</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Type III Analysis of Variance Table with Satterthwaite's method
+                                       Sum Sq Mean Sq NumDF  DenDF  F value
+log10(target_distance)                2.05781 2.05781     1 56.000 301.0458
+room_condition                        0.01120 0.01120     1 57.616   1.6385
+log10(target_distance):room_condition 0.05128 0.05128     1 56.000   7.5020
+                                       Pr(&gt;F)    
+log10(target_distance)                &lt; 2e-16 ***
+room_condition                        0.20566    
+log10(target_distance):room_condition 0.00825 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Number of labels is greater than default palette color count.
+• Select another color `palette` (and/or `package`).</code></pre>
+</div>
+</div>
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
