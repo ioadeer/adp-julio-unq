@@ -21,6 +21,12 @@ library(flextable)
 library(webshot)
 library(officer)
 library(effects)
+library(ggpp)
+library(PupillometryR)
+library(effects)
+library(lattice)
+
+
 
 rm(list=ls())
 
@@ -52,7 +58,7 @@ tabla.ind$condition = factor(tabla.ind$room_condition, levels = c("VIRTUAL",
                                                              "SIMULADO",
                                                              "ABIERTO",
                                                              "CERRADO"))
-levels(tabla.ind$room_condition) = c("Non-individualized HRTF",
+levels(tabla.ind$room_condition) = c("Real environment",
                                 "Individualized HRTF",
                                 "Real speakers",
                                 "Simulated HRTF",
@@ -64,44 +70,43 @@ tabla.ind = tabla.ind %>% rename(sem_perc_dist = sem_respuesta_ind)
 
 results_tbl_bambu = tabla.ind
 results_tbl_bambu$logperc_dist = log10(results_tbl_bambu$perc_dist)
-results_tbl_bambu = filter(results_tbl_bambu, room_condition == "Non-individualized HRTF")
-rm("tabla.ind","tabla.bambu","tabla.raw")
+results_tbl_bambu = filter(results_tbl_bambu, room_condition == "Real environment")
+
 
 
 results_tbl = merge(results_tbl, results_tbl_bambu, all=TRUE)
 
-
-
+rm("tabla.ind","results_tbl_bambu")
 
 tabla.ind_sesgo = tabla.raw %>%
   group_by(Sujeto,Bloque) %>%
-  summarise(signed_bias_ind = mean(signedbias),
-            sd_signed_bias_ind = sd(signedbias),
-            sem_signed_bias_ind = sd(signedbias)/sqrt(n()),
-            unsigned_bias_ind = abs(mean(signedbias)),
-            sd_unsigned_bias_ind = abs(sd(signedbias)),
-            sem_unsigned_bias_ind = abs(sd(signedbias)/sqrt(n())))
+  summarise(mBiasSigned = mean(signedbias),
+            SdBiasSignedE = sd(signedbias),
+            SdBiasSigned = sd(signedbias)/sqrt(n()),
+            mBiasUnSigned = abs(mean(signedbias)),
+            SdBiasUnSignedE = abs(sd(signedbias)),
+            SdBiasUnSigned = abs(sd(signedbias)/sqrt(n())))
 
 
 tabla.ind_sesgo = tabla.ind_sesgo %>% rename(subject = Sujeto)
-tabla.ind_sesgo = tabla.ind_sesgo %>% rename(condition = Bloque)
-tabla.ind_sesgo$condition = factor(tabla.ind_sesgo$condition, levels = c("VIRTUAL",
+tabla.ind_sesgo = tabla.ind_sesgo %>% rename(room_condition = Bloque)
+tabla.ind_sesgo$room_condition = factor(tabla.ind_sesgo$room_condition, levels = c("VIRTUAL",
                                                                          "INDVIRTUAL",
                                                                          "REAL",
                                                                          "SIMULADO",
                                                                          "ABIERTO",
                                                                          "CERRADO"))
-levels(tabla.ind_sesgo$condition) = c("Non-individualized HRTF",
+levels(tabla.ind_sesgo$room_condition) = c("Real environment",
                                       "Individualized HRTF",
                                       "Real speakers",
                                       "Simulated HRTF",
                                       "Incongruous room",
                                       "Closed headphones")
 
+idx = tabla.ind_sesgo$room_condition == "Real environment"
+results_tbl_bias = tabla.ind_sesgo[idx,]
 
-results_tbl_bias = tabla.ind_sesgo
-
-rm("tabla.ind_sesgo")
+rm("tabla.ind_sesgo","tabla.raw")
 
 
 
@@ -172,7 +177,7 @@ eq3 <- substitute("Real environment:"~~~italic(y) == k %.% italic(X)^italic(a),
                        a = round(mDist1stats$tidy_data$estimate[[2]]+mDist1stats$tidy_data$estimate[[6]], digits = 2)))
 #eq3 <- substitute("r.squared:"~~~italic(R)^italic(2) == italic(b),
 #                  list(b = round(r.squaredGLMM(m.Dist1)[2], digits = 2)))
-eq1
+
 
 results_tbl <- results_tbl %>%
   mutate(
@@ -193,18 +198,18 @@ f1 <- ggplot(tabla.pob, aes(x=target_distance, y =10^Mperc_dist, group = room_co
   scale_colour_manual(values = cbPalette) +
   scale_fill_manual(values = cbPalette) +
   geom_line(data = Final.Fixed, aes(x = target_distance, y =10^fit, group=room_condition, color=room_condition))+
-  geom_text(x = 0.2, y = 8.0, label = as.character(as.expression(eq1)), 
+  geom_text(x = 0.2, y = 6.5, label = as.character(as.expression(eq1)), 
             hjust = 0, nudge_x =  0, parse = TRUE, size = 4, color = "#000000",
             family="Times New Roman")+
-  geom_text(x = 0.2, y = 7.0, label = as.character(as.expression(eq2)), 
+  geom_text(x = 0.2, y = 6.2, label = as.character(as.expression(eq2)), 
             hjust = 0, nudge_x =  0,parse = TRUE, size = 4, color = "#E69F00",
             family="Times New Roman")+
-  geom_text(x = 0.2, y = 6.0, label = as.character(as.expression(eq3)), 
+  geom_text(x = 0.2, y = 5.9, label = as.character(as.expression(eq3)), 
             hjust = 0, nudge_x =  0,parse = TRUE, size = 4, color = "#009E73",
             family="Times New Roman")+
   #geom_text(x = 0.2, y = 6.0, label = as.character(as.expression(eq3)), hjust = 0, nudge_x =  0, parse = TRUE, size = 4, color = "#009E73")+
-  scale_x_continuous(name="Distance source (m)", limits = c(0,10)) +
-  scale_y_continuous(name="Perceived distance (m)",   limits = c(0,10)) +
+  scale_x_continuous(name="Distance source (m)", limits = c(0,7)) +
+  scale_y_continuous(name="Perceived distance (m)",   limits = c(0,7)) +
   theme_pubr(base_size = 12, margin = TRUE)+
   theme(legend.position = "top",
         legend.title = element_blank(),
@@ -212,6 +217,10 @@ f1 <- ggplot(tabla.pob, aes(x=target_distance, y =10^Mperc_dist, group = room_co
 
 
 f1
+figures_folder = "../Figuras/"
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "F2A_PAD_LMER", ".png", sep = '')
+ggsave(device = "png", mi_nombre_de_archivo, plot=f1, width=15, height=15, units="cm", limitsize=FALSE, dpi=600)
+
 
 
 ##Analisis Post hoc de slope
@@ -239,15 +248,24 @@ table.slope[idx,]$slope = table.slope[idx,]$slope + coefmodelpob[[2]]
 idx = table.slope$room_condition == "Unknown environment"
 table.slope[idx,]$slope = table.slope[idx,]$slope + coefmodelpob[[2]] +coefmodelpob[[5]]
 
-idx = table.slope$room_condition == "Non-individualized HRTF"
+idx = table.slope$room_condition == "Real environment"
 table.slope[idx,]$slope = table.slope[idx,]$slope + coefmodelpob[[2]] +coefmodelpob[[6]]
 
 t.test(filter(table.slope, 
               room_condition=="Unknown environment")$slope,
        filter(table.slope, 
-              room_condition=="Non-individualized HRTF")$slope, 
+              room_condition=="Real environment")$slope, 
        paired = FALSE)
-
+t.test(filter(table.slope, 
+              room_condition=="Controlled environment")$slope,
+       filter(table.slope, 
+              room_condition=="Real environment")$slope, 
+       paired = FALSE)
+t.test(filter(table.slope, 
+              room_condition=="Unknown environment")$slope,
+       filter(table.slope, 
+              room_condition=="Controlled environment")$slope, 
+       paired = FALSE)
 
 
 results_tblp <- table.slope %>% 
@@ -256,34 +274,31 @@ results_tblp <- table.slope %>%
             SDslope  = sd(slope,na.rm=TRUE)/sqrt(length(slope)))  %>%
   ungroup()
 
-f2 =  ggplot(table.slope, aes(x = room_condition,y = slope,colour = room_condition)) +
-  geom_point()+
-  # geom_pointrange(aes(x=room_condition, y=mslope, ymin=mslope-SDslope, ymax=mslope+SDslope),
-  #                 position = position_dodgenudge(direction = "split", width = 3.2), size = 1.2, shape = 0)+
+f2 =  ggplot(results_tblp, aes(x = room_condition,y = mslope,colour = room_condition)) +
+  geom_pointrange(aes(x=room_condition, y=mslope, ymin=mslope-SDslope, ymax=mslope+SDslope),
+                  size = 1.2, shape = 0)+
   # geom_line(position = position_dodgenudge(direction = "split", width = 3),size = 1.2, alpha=.5)+
   # geom_line(data = results_tbl, mapping = aes(x = room_condition,y = slope, group = subject, colour = room_condition, fill = room_condition),alpha = 0.6)+
-  # geom_point(data = results_tbl, mapping = aes(x = room_condition,y = slope, colour = room_condition, fill = room_condition), size = 2.4,alpha = 1)+
-  # geom_violin(data = filter(results_tbl,type == "NORMAL"), mapping = aes(x = room_condition,y = slope, colour = room_condition, fill = room_condition),
-  #                  position = position_nudge_center(x = .3,
-  #                    y = 0,
-  #                    center_x = 2,
-  #                    direction = "split",
-  #                    kept.origin = c("original", "none")),trim = FALSE, alpha = .2)+
+  geom_jitter(data = table.slope, mapping = aes(x = room_condition,y = slope, colour = room_condition, fill = room_condition), width = .1,
+              height = 0,size = 1.2,alpha = .6)+
+  geom_violin(data = table.slope, mapping = aes(x = room_condition,y = slope, colour = room_condition, fill = room_condition),
+                   trim = FALSE, alpha = .2)+
   scale_colour_manual(values = cbPalette) + 
   scale_fill_manual(values = cbPalette) + 
-  geom_abline(slope = 0,
-              intercept = 0,
-              alpha = 0.5,
-              linetype = "dashed") +
   labs(x = "room_condition", 
-       y = "Slope with LM") +
+       y = "Slope with LMER") +
   # facet_grid(. ~ type) +
   annotate("text", x = 1.5, y = 2,  label = "***", size = 4) +
   annotate("segment", x = 1, xend = 2, y = 1.9, yend = 1.9, colour = "black", size=.5, alpha=1,)+
+  annotate("text", x = 2.5, y = 1.5,  label = "*", size = 4) +
+  annotate("segment", x = 2, xend = 3, y = 1.4, yend = 1.4, colour = "black", size=.5, alpha=1,)+
   theme_pubr(base_size = 12, margin = TRUE)+
   theme(legend.position = "none")
 f2
 
+figures_folder = "../Figuras/"
+mi_nombre_de_archivo = paste(figures_folder, .Platform$file.sep, "F2B_Slop_LMER", ".png", sep = '')
+ggsave(device = "png", mi_nombre_de_archivo, plot=f2, width=18, height=13, units="cm", limitsize=FALSE, dpi=600)
 
 
 
@@ -297,6 +312,58 @@ results_tbls <- results_tbl %>%
             SdBiasUnSigned  = sd(rel_bias_unsigned,na.rm=TRUE)/sqrt(length(rel_bias_unsigned)))  %>%
   ungroup()
 
+idx = results_tbls$room_condition == "Real environment"
+results_tbls = results_tbls[!idx,]
+results_tbls = merge(results_tbls, results_tbl_bias, all=TRUE)
+
+rm("results_tbl_bias")
+
+
+
+#Outlier
+
+res3 <- outliers_mad(x = filter(results_tbls,room_condition == "Real environment")$mBiasSigned ,na.rm=TRUE)
+plot_outliers_mad(res3,x=filter(results_tbls,room_condition == "Real environment")$mBiasSigned,pos_display=TRUE)
+filter(results_tbls,room_condition == "Real environment")[res3$outliers_pos,] #NA
+
+res3 <- outliers_mad(x = filter(results_tbls,room_condition == "Real environment")$mBiasUnSigned ,na.rm=TRUE)
+plot_outliers_mad(res3,x=filter(results_tbls,room_condition == "Real environment")$mBiasUnSigned,pos_display=TRUE)
+filter(results_tbls,room_condition == "Real environment")[res3$outliers_pos,] #NA
+
+res3 <- outliers_mad(x = filter(results_tbls,room_condition == "Unknown environment")$mBiasSigned ,na.rm=TRUE)
+plot_outliers_mad(res3,x=filter(results_tbls,room_condition == "Unknown environment")$mBiasSigned,pos_display=TRUE)
+filter(results_tbls,room_condition == "Unknown environment")[res3$outliers_pos,] #NA
+
+res3 <- outliers_mad(x = filter(results_tbls,room_condition == "Unknown environment")$mBiasUnSigned ,na.rm=TRUE)
+plot_outliers_mad(res3,x=filter(results_tbls,room_condition == "Unknown environment")$mBiasUnSigned,pos_display=TRUE)
+filter(results_tbls,room_condition == "Unknown environment")[res3$outliers_pos,] #NA
+
+res3 <- outliers_mad(x = filter(results_tbls,room_condition == "Controlled environment")$mBiasSigned ,na.rm=TRUE)
+plot_outliers_mad(res3,x=filter(results_tbls,room_condition == "Controlled environment")$mBiasSigned,pos_display=TRUE)
+filter(results_tbls,room_condition == "Controlled environment")[res3$outliers_pos,] #NA
+
+res3 <- outliers_mad(x = filter(results_tbls,room_condition == "Controlled environment")$mBiasUnSigned ,na.rm=TRUE)
+plot_outliers_mad(res3,x=filter(results_tbls,room_condition == "Controlled environment")$mBiasUnSigned,pos_display=TRUE)
+filter(results_tbls,room_condition == "Controlled environment")[res3$outliers_pos,] #NA
+
+
+results_tbls = filter(results_tbls, subject != "13")
+results_tbls = filter(results_tbls, subject != "19")
+results_tbls = filter(results_tbls, subject != "23")
+results_tbls = filter(results_tbls, subject != "S001")
+results_tbls = filter(results_tbls, subject != "S020")
+results_tbls = filter(results_tbls, subject != "125")
+results_tbls = filter(results_tbls, subject != "107")
+
+
+
+
+
+
+
+
+
+
 results_tblp <- results_tbls %>% 
   group_by(room_condition) %>%
   summarise(MBiasSigned  = mean(mBiasSigned,na.rm=TRUE),
@@ -308,11 +375,11 @@ results_tblp <- results_tbls %>%
 #   geom_point(aes(x = as.numeric(Tiempo)-.15, y = LeqAS, colour = Condicion),position = position_jitter(width = .05, height = 0), size = 1, shape = 20)+
 
 f6 <-  ggplot(results_tblp, aes(x = room_condition,y = MBiasSigned, colour = room_condition, fill = room_condition)) +
-  geom_pointrange(aes(x=room_condition, y=MBiasSigned, ymin=MBiasSigned-SDBiasSigned, ymax=MBiasSigned+SDBiasSigned), size = 0.5)+
-  geom_line(aes(group = 1),size = 1.2, alpha=.5)+
+  geom_pointrange(aes(x=room_condition, y=MBiasSigned, ymin=MBiasSigned-SDBiasSigned, ymax=MBiasSigned+SDBiasSigned), size = 1)+
+  # geom_line(aes(group = 1),size = 1.2, alpha=.5)+
   geom_point(data = results_tbls, mapping = aes(x = room_condition,y = mBiasSigned, colour = room_condition, fill = room_condition), alpha = 0.3)+
-  geom_line(data = results_tbls, mapping = aes(x = room_condition,y = mBiasSigned, group = subject, colour = room_condition),alpha = 0.3)+
-  geom_violin(data= results_tbls,aes(x = room_condition,y = mBiasSigned), trim=TRUE, alpha=0)+
+  # geom_line(data = results_tbls, mapping = aes(x = room_condition,y = mBiasSigned, group = subject, colour = room_condition),alpha = 0.3)+
+  geom_violin(data= results_tbls,aes(x = room_condition,y = mBiasSigned), trim=TRUE, alpha=.3)+
   scale_colour_manual(values = cbPalette) + 
   scale_fill_manual(values = cbPalette) + 
   geom_abline(slope = 0,
@@ -325,9 +392,7 @@ f6 <-  ggplot(results_tblp, aes(x = room_condition,y = MBiasSigned, colour = roo
   #annotate("text", x = 1.5, y = 0.3,  label = "*", size = 4) +
   #annotate("segment", x = 1, xend = 2, y = 0.2, yend = 0.2, colour = "black", size=.5, alpha=1,)+
   theme_pubr(base_size = 12, margin = TRUE)+
-  theme(legend.position = "none",
-        axis.title.x = element_blank(),
-        axis.text.x = element_blank())
+  theme(legend.position = "none")
 
 f6
 
@@ -355,6 +420,21 @@ testSigendBias <- t.test(filter(results_tbls,
 
 testSigendBias
 
+testSigendBias <- t.test(filter(results_tbls, 
+                                room_condition=="Real environment" )$mBiasSigned,
+                         filter(results_tbls, 
+                                room_condition=="Unknown environment")$mBiasSigned, 
+                         paired = FALSE)
+
+testSigendBias
+
+testSigendBias <- t.test(filter(results_tbls, 
+                                room_condition=="Real environment" )$mBiasSigned,
+                         filter(results_tbls, 
+                                room_condition=="Controlled environment")$mBiasSigned, 
+                         paired = FALSE)
+
+testSigendBias
 #95 percent confidence interval:
 #  -0.31498920  0.01249011
 #sample estimates:
@@ -402,9 +482,32 @@ t.test(filter(results_tbls,
        filter(results_tbls, 
               room_condition=="Unknown environment")$mBiasUnSigned, 
        paired = FALSE)
+t.test(filter(results_tbls, 
+              room_condition=="Real environment" )$mBiasUnSigned,
+       filter(results_tbls, 
+              room_condition=="Unknown environment")$mBiasUnSigned, 
+       paired = FALSE)
+t.test(filter(results_tbls, 
+              room_condition=="Controlled environment" )$mBiasUnSigned,
+       filter(results_tbls, 
+              room_condition=="Real environment")$mBiasUnSigned, 
+       paired = FALSE)
 
-
-
+t.test(filter(results_tbls2, 
+              room_condition=="Controlled environment" )$mBiasUnSigned,
+       filter(results_tbls2, 
+              room_condition=="Unknown environment")$mBiasUnSigned, 
+       paired = FALSE)
+t.test(filter(results_tbls2, 
+              room_condition=="Real environment" )$mBiasUnSigned,
+       filter(results_tbls2, 
+              room_condition=="Unknown environment")$mBiasUnSigned, 
+       paired = FALSE)
+t.test(filter(results_tbls2, 
+              room_condition=="Controlled environment" )$mBiasUnSigned,
+       filter(results_tbls2, 
+              room_condition=="Real environment")$mBiasUnSigned, 
+       paired = FALSE)
 
 
 
