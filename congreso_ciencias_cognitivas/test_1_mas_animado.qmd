@@ -14,6 +14,7 @@ editor: visual
 
 ```
 
+# Title {visibility="hidden"}
 ## Estudio de percepción auditiva de distancia: comparación entre experimento en entorno controlado y experimento remoto {transition="none fade-out" transition-speed="fast"}
 
 Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara
@@ -26,38 +27,56 @@ Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara
 ![](imgs/logos/Foncyt.png)
 :::
 
+# Intro {visibility="hidden"}
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
+<br>
 
-## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+<br>
 
-### Percepción auditiva de distancia
+<br>
+
+<br>
+
+### Introducción
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Introducción
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Introducción 
+
+#### Percepción auditiva de distancia
 
 <br>
 
 Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
 
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+### Introducción 
 
-## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
-
-### Percepción auditiva de distancia
+#### Percepción auditiva de distancia
 
 Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
 
 - Relevante para la ubicación de estímulos ocluidos.
 
-## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+### Introducción 
 
-### Percepción auditiva de distancia
+#### Percepción auditiva de distancia
 
 Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
 
 - Relevante para la ubicación de estímulos ocluidos.
 - Es relevante para personas con impedimentos visuales.
 
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+### Introducción 
 
-## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
-
-### Percepción auditiva de distancia
+#### Percepción auditiva de distancia
 
 Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
 
@@ -65,20 +84,32 @@ Localización espacial de distancia estímulos sonoros a lo largo del eje antero
 - Es relevante para personas con impedimentos visuales.
 - Es notablemente más precisa en instancia bimodal (complentada por percepción visual).
 
-## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+### Introducción 
 
-### Percepción auditiva de distancia
+#### Percepción auditiva de distancia
 
 Se vale de los siguientes indicios:
 
 - Intensidad de estímulo
 - Relación entre energía directa y reverberante de estímulo
 
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+### Introducción 
 
+#### Percepción auditiva de distancia
 
-## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+Se vale de los siguientes indicios:
 
-### Percepción auditiva de distancia
+- Intensidad de estímulo
+- Relación entre energía directa y reverberante de estímulo
+
+![](imgs/ref_pad/with_visual_cues.png)
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+### Introducción
+
+#### Percepción auditiva de distancia
 
 Setups experimentales para el estudio de la percepción auditiva de distancia. 
 
@@ -91,15 +122,15 @@ Setups experimentales para el estudio de la percepción auditiva de distancia.
 :::
 
 ::: {.column width="50%"}
-![](imgs/ref_pad/with_visual_cues.png)
+![](imgs/setup/sala_untref.jpg)
 :::
 :::
 
 
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+### Introducción 
 
-## Introducción {auto-animate="true"}
-
-### Experimentos en entornos no controlados
+#### Experimentos en entornos no controlados
 
 Experimentos remotos
 
@@ -114,71 +145,10 @@ placeholder
 :::
 :::
 
-## ¿Cómo es la percepción visual en Realidad Virtual? {auto-animate="true"}
 
-<br>
-
-La media de las distancias estimadas en entornos virtuales es de un 74% de los entornos modelados debido a
-
--   limitaciones de calidad gráfica y campo visual (FOV)
--   peso de los cascos
-
-## ¿Cómo es la percepción visual en Realidad Virtual? {auto-animate="true"}
-
-La media de las distancias estimadas en entornos virtuales es de un 74% de los entornos modelados debido a
-
--   limitaciones de calidad gráfica y campo visual (FOV)
--   peso de los cascos
-
-En cascos más modernos, se observa una tendencia a que la percepción en entornos virtuales se equipare a la de entornos reales.
-
-##  {transition="fade-in fade-out" transition-speed="fast"}
-
-### Diseño de entornos virtuales
-
-::: columns
-::: {.column width="55%"}
-![](imgs/setup/herramientas_vr/fig_salas4.png)
-:::
-
-::: {.column width="45%"}
-<br><br> ![](imgs/setup/herramientas_vr/first_workflow.png)
-:::
-:::
-
-##  {transition="fade-in" transition-speed="fast"}
-
-### Implementación en Realidad virtual
-
-::: columns
-::: {.column width="40%"}
-<br> placeholder ![]()
-:::
-
-::: {.column width="60%"}
-<br> placeholder 
-:::
-:::
-
+# Methods {visibility="hidden"}
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-
-<br>
-
-<br>
-
-<br>
-
-<br>
-
-### Validación experimental visual del entorno virtual
-
-##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-
-### Validación experimental visual del entorno virtual
-
-##  {auto-animate="true"}
-
-### Validación experimental visual del entorno virtual
+### Metodologia
 
 #### Participantes
 
@@ -189,7 +159,7 @@ En cascos más modernos, se observa una tendencia a que la percepción en entorn
 
 ##  {auto-animate="true"}
 
-### Validación experimental visual del entorno virtual
+### Metodologia
 
 #### Participantes
 
@@ -205,7 +175,7 @@ En cascos más modernos, se observa una tendencia a que la percepción en entorn
 
 ##  {auto-animate="true"}
 
-### Validación experimental visual del entorno virtual
+### Metodologia
 
 ::: columns
 ::: {.column width="40%"}
@@ -231,7 +201,7 @@ En cascos más modernos, se observa una tendencia a que la percepción en entorn
 
 ##  {auto-animate="true"}
 
-### Validación experimental visual del entorno virtual
+### Metodologia
 
 ::: columns
 ::: {.column width="40%"}
@@ -258,7 +228,7 @@ En cascos más modernos, se observa una tendencia a que la percepción en entorn
 
 ##  {auto-animate="true"}
 
-### Validación experimental visual del entorno virtual
+### Metodologia
 
 ::: columns
 ::: {.column width="40%"}
