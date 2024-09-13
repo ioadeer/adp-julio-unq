@@ -256,10 +256,12 @@ placeholder
 
 ## 
 
+# Results {visibility="hidden"}
 ### Resultados
 
 Resultados va aca
 
+# Discusion {visibility="hidden"}
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 <br>
@@ -323,6 +325,7 @@ La subestimación del entorno real puede estar vinculada al procedimeinto experi
 
 Similar estimación de tamaño para ambos entornos.
 
+
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Discusión
@@ -333,6 +336,7 @@ Similar estimación de tamaño para ambos entornos.
 
 Difiere a lo reportado en @renner_perception_2013 donde se asevera que el tamaño de los entornos virtuales es subestimado en un 74% con respecto a su contraparte real.
 
+# Conclusion {visibility="hidden"}
 ## Conclusión {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 <br> <br> <br>
@@ -359,8 +363,7 @@ Los entornos virtuales son percibidos de forma verosímil.
 
 La herramienta desarrollada presenta validez ecológica para su uso en la modalidad visual de experimentos de Percepción Auditiva de Distancia.
 
-## 
-
+# End {visibility="hidden"}
 ### ¡Gracias! ¿Preguntas?
 
 ### Desarrollo y validación de un entorno visual virtual para experimentos psicofísicos
