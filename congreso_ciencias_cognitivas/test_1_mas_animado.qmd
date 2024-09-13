@@ -1,0 +1,365 @@
+---
+title: ""
+bibliography: bib/references.bib
+suppress-bibliography: true
+authors: 
+format: 
+  revealjs:
+    theme: simple
+    logo: imgs/logos/logo_acaa.png
+editor: visual
+---
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+
+```
+
+## Estudio de percepción auditiva de distancia: comparación entre experimento en entorno controlado y experimento remoto {transition="none fade-out" transition-speed="fast"}
+
+Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara
+
+::: {layout="[[1.5,1.2,1.5],[1]]"}
+![](imgs/logos/lapso_black3.png)
+
+![](imgs/logos/Unqui.png) ![](imgs/logos/logo_acaa.png)
+
+![](imgs/logos/Foncyt.png)
+:::
+
+## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+<br>
+
+### Percepción auditiva de distancia
+
+La percepción auditiva de distancia se vale de los siguientes cues:
+
+- Intensidad de estímulo
+- Relación entre energía directa y reverberante de estímulo
+
+## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Percepión auditiva de distancia
+
+La percepción auditiva de distancia se vale de los siguientes cues:
+
+- Intensidad de estímulo
+- Relación entre energía directa y reverberante de estímulo
+
+::: columns
+::: {.column width="50%"}
+![](imgs/ref_pad/setups.png)
+:::
+
+::: {.column width="50%"}
+![](imgs/ref_pad/with_visual_cues.png)
+:::
+:::
+
+## Introducción {auto-animate="true"}
+
+### Experimentos en entornos no controlados
+
+Experimentos remotos
+
+::: columns
+::: {.column width="40%"}
+-   Entorno visual virtual
+-   Estímulos acústicos reales
+:::
+
+::: {.column width="60%"}
+![](imgs/setup/setup_final.png)
+:::
+:::
+
+## ¿Cómo es la percepción visual en Realidad Virtual? {auto-animate="true"}
+
+<br>
+
+La media de las distancias estimadas en entornos virtuales es de un 74% de los entornos modelados debido a
+
+-   limitaciones de calidad gráfica y campo visual (FOV)
+-   peso de los cascos
+
+## ¿Cómo es la percepción visual en Realidad Virtual? {auto-animate="true"}
+
+La media de las distancias estimadas en entornos virtuales es de un 74% de los entornos modelados debido a
+
+-   limitaciones de calidad gráfica y campo visual (FOV)
+-   peso de los cascos
+
+En cascos más modernos, se observa una tendencia a que la percepción en entornos virtuales se equipare a la de entornos reales.
+
+##  {transition="fade-in fade-out" transition-speed="fast"}
+
+### Diseño de entornos virtuales
+
+::: columns
+::: {.column width="55%"}
+![](imgs/setup/herramientas_vr/fig_salas4.png)
+:::
+
+::: {.column width="45%"}
+<br><br> ![](imgs/setup/herramientas_vr/first_workflow.png)
+:::
+:::
+
+##  {transition="fade-in" transition-speed="fast"}
+
+### Implementación en Realidad virtual
+
+::: columns
+::: {.column width="40%"}
+<br> ![](imgs/setup/herramientas_vr/unreal_blender2.png)
+:::
+
+::: {.column width="60%"}
+<br> {{< video ../videos/vr/vr_clip_1.mp4 >}}
+:::
+:::
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+### Validación experimental visual del entorno virtual
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Validación experimental visual del entorno virtual
+
+##  {auto-animate="true"}
+
+### Validación experimental visual del entorno virtual
+
+#### Participantes
+
+50 sujetos
+
+-   22 mujeres
+-   28 hombres
+
+##  {auto-animate="true"}
+
+### Validación experimental visual del entorno virtual
+
+#### Participantes
+
+50 sujetos
+
+-   22 mujeres
+-   28 hombres
+
+#### Materiales
+
+-   Casco HTC Vive Pro
+-   Placa GeForce RTX3070
+
+##  {auto-animate="true"}
+
+### Validación experimental visual del entorno virtual
+
+::: columns
+::: {.column width="40%"}
+#### Participantes
+
+50 sujetos
+
+-   22 mujeres
+-   28 hombres
+
+#### Materiales
+
+-   Casco HTC Vive Pro
+-   Placa GeForce RTX3070
+:::
+
+::: {.column width="60%"}
+#### Procedimiento
+
+1.  Introducir participantes en sala experimental procurando que en un principio no la vean.
+:::
+:::
+
+##  {auto-animate="true"}
+
+### Validación experimental visual del entorno virtual
+
+::: columns
+::: {.column width="40%"}
+#### Participantes
+
+50 sujetos
+
+-   22 mujeres
+-   28 hombres
+
+#### Materiales
+
+-   Casco HTC Vive Pro
+-   Placa GeForce RTX3070
+:::
+
+::: {.column width="60%"}
+#### Procedimiento
+
+1.  Introducir participantes en sala experimental procurando que en un principio no la vean.
+2.  Colocar casco de RV y registrar reporte verbal del tamaño de la sala virtual.
+:::
+:::
+
+##  {auto-animate="true"}
+
+### Validación experimental visual del entorno virtual
+
+::: columns
+::: {.column width="40%"}
+#### Participantes
+
+50 sujetos
+
+-   22 mujeres
+-   28 hombres
+
+#### Materiales
+
+-   Casco HTC Vive Pro
+-   Placa GeForce RTX3070
+:::
+
+::: {.column width="60%"}
+#### Procedimiento
+
+1.  Introducir participantes en sala experimental procurando que en un principio no la vean.
+2.  Colocar casco de RV y registrar reporte verbal del tamaño de la sala virtual.
+3.  Remover casco y registrar reporte verbal del tamaño de la sala real.
+:::
+:::
+
+## 
+
+### Resultados
+
+Resultados va aca
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+### Discusión
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+#### Percepción espacial
+
+El volumen de sala percibido es subestimado en
+
+-   un 54% para el entorno real
+-   un 56% para el entorno virtual
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+#### Percepción espacial
+
+El volumen de sala percibido es subestimado en
+
+-   un 54% para el entorno real
+-   un 56% para el entorno virtual
+
+El resultado de la subestimación del entorno virtual coincide con lo reportado en @kelly_perceived_2017, donde se realiza un experimento con un casco similar (HTC Vive).
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+#### Percepción espacial
+
+El volumen de sala percibido es subestimado en
+
+-   un 54% para el entorno real
+-   un 56% para el entorno virtual
+
+El resultado de la subestimación del entorno virtual coincide con lo reportado en @kelly_perceived_2017, donde se realiza un experimento con un casco similar (HTC Vive).
+
+La subestimación del entorno real puede estar vinculada al procedimeinto experimental y al método de reporte.
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+#### Comparación de entorno real vs entorno virtual
+
+Similar estimación de tamaño para ambos entornos.
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+#### Comparación de entorno real vs entorno virtual
+
+Similar estimación de tamaño para ambos entornos.
+
+Difiere a lo reportado en @renner_perception_2013 donde se asevera que el tamaño de los entornos virtuales es subestimado en un 74% con respecto a su contraparte real.
+
+## Conclusión {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+<br> <br> <br>
+
+Pese a que existe una subestimación considerable del entorno, se observa una escasa diferencia entre el tamaño percibido para las modalidades real y virtual.
+
+## Conclusión {auto-animate="true"}
+
+<br>
+
+Pese a que existe una subestimación considerable del entorno, se observa una escasa diferencia entre el tamaño percibido para las modalidades real y virtual.
+
+<br>
+
+Los entornos virtuales son percibidos de forma verosímil.
+
+## Conclusión {auto-animate="true"}
+
+Pese a que existe una subestimación considerable del entorno, se observa una escasa diferencia entre el tamaño percibido para las modalidades real y virtual.
+
+Los entornos virtuales son percibidos de forma verosímil.
+
+<br>
+
+La herramienta desarrollada presenta validez ecológica para su uso en la modalidad visual de experimentos de Percepción Auditiva de Distancia.
+
+## 
+
+### ¡Gracias! ¿Preguntas?
+
+### Desarrollo y validación de un entorno visual virtual para experimentos psicofísicos
+
+Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Manuel C. Eguía, Ramiro O. Vergara <br> contacto: jcervino4\@uvq.edu.ar
+
+::: {layout="[[1.5,1.2,1.5],[1]]"}
+![](imgs/logos/lapso_black3.png)
+
+![](imgs/logos/Unqui.png) ![](imgs/logos/logo_acaa.png)
+
+![](imgs/logos/Foncyt.png)
+:::
