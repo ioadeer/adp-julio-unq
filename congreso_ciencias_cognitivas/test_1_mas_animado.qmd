@@ -26,35 +26,76 @@ Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara
 ![](imgs/logos/Foncyt.png)
 :::
 
-## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
-<br>
+
+## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Percepción auditiva de distancia
 
-La percepción auditiva de distancia se vale de los siguientes cues:
+<br>
 
-- Intensidad de estímulo
-- Relación entre energía directa y reverberante de estímulo
+Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+
 
 ## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
-### Percepión auditiva de distancia
+### Percepción auditiva de distancia
 
-La percepción auditiva de distancia se vale de los siguientes cues:
+Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+
+- Relevante para la ubicación de estímulos ocluidos.
+
+## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Percepción auditiva de distancia
+
+Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+
+- Relevante para la ubicación de estímulos ocluidos.
+- Es relevante para personas con impedimentos visuales.
+
+
+## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Percepción auditiva de distancia
+
+Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+
+- Relevante para la ubicación de estímulos ocluidos.
+- Es relevante para personas con impedimentos visuales.
+- Es notablemente más precisa en instancia bimodal (complentada por percepción visual).
+
+## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Percepción auditiva de distancia
+
+Se vale de los siguientes indicios:
 
 - Intensidad de estímulo
 - Relación entre energía directa y reverberante de estímulo
 
+
+
+## Introducción {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Percepción auditiva de distancia
+
+Setups experimentales para el estudio de la percepción auditiva de distancia. 
+
+- Entornos experimentales controlados
+- Fuentes sonoras reales o virtuales
+
 ::: columns
 ::: {.column width="50%"}
-![](imgs/ref_pad/setups.png)
+![](imgs/setup/sala_teatro.jpg)
 :::
 
 ::: {.column width="50%"}
 ![](imgs/ref_pad/with_visual_cues.png)
 :::
 :::
+
+
 
 ## Introducción {auto-animate="true"}
 
@@ -69,7 +110,7 @@ Experimentos remotos
 :::
 
 ::: {.column width="60%"}
-![](imgs/setup/setup_final.png)
+placeholder 
 :::
 :::
 
@@ -111,11 +152,11 @@ En cascos más modernos, se observa una tendencia a que la percepción en entorn
 
 ::: columns
 ::: {.column width="40%"}
-<br> ![](imgs/setup/herramientas_vr/unreal_blender2.png)
+<br> placeholder ![]()
 :::
 
 ::: {.column width="60%"}
-<br> {{< video ../videos/vr/vr_clip_1.mp4 >}}
+<br> placeholder 
 :::
 :::
 
