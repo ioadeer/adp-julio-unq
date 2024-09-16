@@ -6,7 +6,7 @@ authors:
 format: 
   revealjs:
     theme: simple
-    logo: imgs/logos/logo_acaa.png
+    logo: imgs/logos/footer_banner_congreso.png
 editor: visual
 ---
 
@@ -15,19 +15,21 @@ editor: visual
 ```
 
 # Title {visibility="hidden"}
+
 ## Estudio de percepción auditiva de distancia: comparación entre experimento en entorno controlado y experimento remoto {transition="none fade-out" transition-speed="fast"}
 
 Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara
 
-::: {layout="[[1.5,1.2,1.5],[1]]"}
+::: {layout="[[1,1,1]]"}
 ![](imgs/logos/lapso_black3.png)
 
-![](imgs/logos/Unqui.png) ![](imgs/logos/logo_acaa.png)
+![](imgs/logos/Unqui.png)
 
-![](imgs/logos/Foncyt.png)
+![](imgs/logos/Conicet.png)
 :::
 
 # Intro {visibility="hidden"}
+
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 <br>
@@ -46,75 +48,103 @@ Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
-### Introducción 
+### Introducción
 
 #### Percepción auditiva de distancia
 
 <br>
 
-Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+Localización espacial de distancia de estímulos sonoros a lo largo del eje anteroposterior.
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-### Introducción 
+
+### Introducción
 
 #### Percepción auditiva de distancia
 
-Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+Localización espacial de distancia de estímulos sonoros a lo largo del eje anteroposterior.
 
-- Relevante para la ubicación de estímulos ocluidos.
+![](imgs/azimut.jpg){fig-align="center" width="80%"}
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-### Introducción 
+
+### Introducción
 
 #### Percepción auditiva de distancia
 
-Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+Localización espacial de distancia de estímulos sonoros a lo largo del eje anteroposterior.
 
-- Relevante para la ubicación de estímulos ocluidos.
-- Es relevante para personas con impedimentos visuales.
+-   Relevante para la ubicación de estímulos ocluidos
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-### Introducción 
+
+### Introducción
 
 #### Percepción auditiva de distancia
 
-Localización espacial de distancia estímulos sonoros a lo largo del eje anteroposterior. 
+Localización espacial de distancia de estímulos sonoros a lo largo del eje anteroposterior.
 
-- Relevante para la ubicación de estímulos ocluidos.
-- Es relevante para personas con impedimentos visuales.
-- Es notablemente más precisa en instancia bimodal (complentada por percepción visual).
+-   Relevante para la ubicación de estímulos ocluidos
+-   Relevante para personas con impedimentos visuales
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-### Introducción 
+
+### Introducción
+
+#### Percepción auditiva de distancia
+
+Localización espacial de distancia de estímulos sonoros a lo largo del eje anteroposterior.
+
+-   Relevante para la ubicación de estímulos ocluidos
+-   Relevante para personas con impedimentos visuales
+-   Notablemente más precisa en instancia bimodal (complementada por percepción visual)
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Introducción
 
 #### Percepción auditiva de distancia
 
 Se vale de los siguientes indicios:
 
-- Intensidad de estímulo
-- Relación entre energía directa y reverberante de estímulo
+-   Intensidad de estímulo
+-   Relación entre energía directa y reverberante de estímulo
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-### Introducción 
+
+### Introducción
 
 #### Percepción auditiva de distancia
 
 Se vale de los siguientes indicios:
 
-- Intensidad de estímulo
-- Relación entre energía directa y reverberante de estímulo
+-   Intensidad de estímulo
+-   Relación entre energía directa y reverberante de estímulo
 
-![](imgs/ref_pad/with_visual_cues.png)
+::: columns
+::: {.column width="50%"}
+Se cuantifica comunmente de acuerdo a una función de potencia con la forma
+
+$$
+r^\prime = kr^a
+$$
+:::
+
+::: {.column width="50%"}
+![](imgs/curva.png){width="90%"}
+:::
+:::
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
 ### Introducción
 
 #### Percepción auditiva de distancia
 
-Setups experimentales para el estudio de la percepción auditiva de distancia. 
+Setups experimentales para el estudio de la percepción auditiva de distancia.
 
-- Entornos experimentales controlados
-- Fuentes sonoras reales o virtuales
+-   Entornos experimentales controlados
+-   Fuentes sonoras reales o virtuales
 
 ::: columns
 ::: {.column width="50%"}
@@ -126,28 +156,38 @@ Setups experimentales para el estudio de la percepción auditiva de distancia.
 :::
 :::
 
-
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
-### Introducción 
 
-#### Experimentos en entornos no controlados
+### Introducción
 
-Experimentos remotos
+#### Objetivo
+
+Comparar la percepción auditiva de fuentes virtuales en dos contextos.
 
 ::: columns
-::: {.column width="40%"}
--   Entorno visual virtual
--   Estímulos acústicos reales
+::: {.column width="50%"}
+Entorno controlado
+
+-   Sala experimental
+-   Equipamiento de audio de calidad profesional
+    -   Auriculares
+    -   Interfaz digital analógica
 :::
 
-::: {.column width="60%"}
-placeholder 
-:::
-:::
+::: {.column width="50%"}
+Entorno no controlado
 
+-   Experimento web
+-   Auriculares provistos por participantes
+    -   Diversa calidad
+    -   Distinto tipo
+:::
+:::
 
 # Methods {visibility="hidden"}
+
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
 ### Metodologia
 
 #### Participantes
@@ -257,11 +297,13 @@ placeholder
 ## 
 
 # Results {visibility="hidden"}
+
 ### Resultados
 
 Resultados va aca
 
 # Discusion {visibility="hidden"}
+
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 <br>
@@ -325,7 +367,6 @@ La subestimación del entorno real puede estar vinculada al procedimeinto experi
 
 Similar estimación de tamaño para ambos entornos.
 
-
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Discusión
@@ -337,6 +378,7 @@ Similar estimación de tamaño para ambos entornos.
 Difiere a lo reportado en @renner_perception_2013 donde se asevera que el tamaño de los entornos virtuales es subestimado en un 74% con respecto a su contraparte real.
 
 # Conclusion {visibility="hidden"}
+
 ## Conclusión {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 <br> <br> <br>
@@ -364,11 +406,12 @@ Los entornos virtuales son percibidos de forma verosímil.
 La herramienta desarrollada presenta validez ecológica para su uso en la modalidad visual de experimentos de Percepción Auditiva de Distancia.
 
 # End {visibility="hidden"}
+
 ### ¡Gracias! ¿Preguntas?
 
 ### Desarrollo y validación de un entorno visual virtual para experimentos psicofísicos
 
-Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Manuel C. Eguía, Ramiro O. Vergara <br> contacto: jcervino4\@uvq.edu.ar
+Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara <br> contacto: jcervino4\@uvq.edu.ar
 
 ::: {layout="[[1.5,1.2,1.5],[1]]"}
 ![](imgs/logos/lapso_black3.png)
