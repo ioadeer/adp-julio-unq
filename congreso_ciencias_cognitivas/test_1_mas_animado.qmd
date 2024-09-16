@@ -188,113 +188,105 @@ Entorno no controlado
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
-### Metodologia
-
-#### Participantes
-
-50 sujetos
-
--   22 mujeres
--   28 hombres
-
-##  {auto-animate="true"}
-
-### Metodologia
-
-#### Participantes
-
-50 sujetos
-
--   22 mujeres
--   28 hombres
-
-#### Materiales
-
--   Casco HTC Vive Pro
--   Placa GeForce RTX3070
-
-##  {auto-animate="true"}
-
-### Metodologia
+### Metodología
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 #### Participantes
 
-50 sujetos
+80 sujetos con edad promedio 32 años.
 
--   22 mujeres
--   28 hombres
+- 30 entorno controlado
+- 50 web
 
-#### Materiales
 
--   Casco HTC Vive Pro
--   Placa GeForce RTX3070
+-   28 mujeres
+-   50 hombres
+-   2 otros
 :::
 
-::: {.column width="60%"}
-#### Procedimiento
+::: {.column width="40%"}
+:::
 
-1.  Introducir participantes en sala experimental procurando que en un principio no la vean.
+::: {.column width="30%"}
 :::
 :::
 
 ##  {auto-animate="true"}
 
-### Metodologia
+### Metodología
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 #### Participantes
 
-50 sujetos
+80 sujetos con edad promedio 32 años.
 
--   22 mujeres
--   28 hombres
+- 30 entorno controlado
+- 50 web
 
-#### Materiales
 
--   Casco HTC Vive Pro
--   Placa GeForce RTX3070
+-   28 mujeres
+-   50 hombres
+-   2 otros
 :::
 
-::: {.column width="60%"}
-#### Procedimiento
+::: {.column width="40%"}
+#### Materiales
+-   Computadora
 
-1.  Introducir participantes en sala experimental procurando que en un principio no la vean.
-2.  Colocar casco de RV y registrar reporte verbal del tamaño de la sala virtual.
+##### Entorno controlado
+-   Auriculares Sennheiser HD 800 
+-   Interfaz RME Fireface USB
+
+#####  Entorno no controlado
+-   Auriculares diversos
+
+:::
+
+::: {.column width="30%"}
 :::
 :::
 
 ##  {auto-animate="true"}
 
-### Metodologia
+### Metodología
 
 ::: columns
-::: {.column width="40%"}
+::: {.column width="30%"}
 #### Participantes
 
-50 sujetos
+80 sujetos con edad promedio 32 años.
 
--   22 mujeres
--   28 hombres
+- 30 entorno controlado
+- 50 web
 
-#### Materiales
 
--   Casco HTC Vive Pro
--   Placa GeForce RTX3070
+-   28 mujeres
+-   50 hombres
+-   2 otros
 :::
 
-::: {.column width="60%"}
+::: {.column width="40%"}
+#### Materiales
+-   Computadora
+
+##### Entorno controlado
+-   Auriculares Sennheiser HD 800 
+-   Interfaz RME Fireface USB
+
+#####  Entorno no controlado
+-   Auriculares diversos
+
+:::
+
+::: {.column width="30%"}
 #### Procedimiento
 
-1.  Introducir participantes en sala experimental procurando que en un principio no la vean.
-2.  Colocar casco de RV y registrar reporte verbal del tamaño de la sala virtual.
-3.  Remover casco y registrar reporte verbal del tamaño de la sala real.
+1.  Encuesta con datos poblacionales
+2.  Sesión experimental programada en PsychoPy
 :::
 :::
-
-## 
 
 # Results {visibility="hidden"}
 
