@@ -144,7 +144,7 @@ $$
 Setups experimentales para el estudio de la percepción auditiva de distancia.
 
 -   Entornos experimentales controlados
--   Fuentes sonoras reales o virtuales
+-   Fuentes sonoras reales o virtuales (HRTF / BRIR)
 
 ::: columns
 ::: {.column width="50%"}
@@ -196,12 +196,14 @@ Entorno no controlado
 
 80 sujetos con edad promedio 32 años.
 
-- 30 entorno controlado
-- 50 web
+-   30 entorno controlado
 
+-   50 web
 
 -   28 mujeres
+
 -   50 hombres
+
 -   2 otros
 :::
 
@@ -222,26 +224,30 @@ Entorno no controlado
 
 80 sujetos con edad promedio 32 años.
 
-- 30 entorno controlado
-- 50 web
+-   30 entorno controlado
 
+-   50 web
 
 -   28 mujeres
+
 -   50 hombres
+
 -   2 otros
 :::
 
 ::: {.column width="40%"}
 #### Materiales
+
 -   Computadora
 
 ##### Entorno controlado
--   Auriculares Sennheiser HD 800 
+
+-   Auriculares Sennheiser HD 800
 -   Interfaz RME Fireface USB
 
-#####  Entorno no controlado
--   Auriculares diversos
+##### Entorno no controlado
 
+-   Auriculares diversos
 :::
 
 ::: {.column width="30%"}
@@ -258,26 +264,30 @@ Entorno no controlado
 
 80 sujetos con edad promedio 32 años.
 
-- 30 entorno controlado
-- 50 web
+-   30 entorno controlado
 
+-   50 web
 
 -   28 mujeres
+
 -   50 hombres
+
 -   2 otros
 :::
 
 ::: {.column width="40%"}
 #### Materiales
+
 -   Computadora
 
 ##### Entorno controlado
--   Auriculares Sennheiser HD 800 
+
+-   Auriculares Sennheiser HD 800
 -   Interfaz RME Fireface USB
 
-#####  Entorno no controlado
--   Auriculares diversos
+##### Entorno no controlado
 
+-   Auriculares diversos
 :::
 
 ::: {.column width="30%"}
@@ -290,9 +300,47 @@ Entorno no controlado
 
 # Results {visibility="hidden"}
 
-### Resultados
+## {auto-animate="true"}
 
-Resultados va aca
+### Resultados 
+
+<br>
+
+Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto.
+
+## {auto-animate="true"}
+
+### Resultados {auto-animate="true"}
+
+Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto.
+
+El Análisis fue hecho con el paquete lmer de R.
+
+## {auto-animate="true"}
+
+### Resultados {auto-animate="true"}
+
+Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto.
+
+El Análisis fue hecho con el paquete lmer de R.
+
+Se observa una interacción significativa entre la condición de entorno y distancia percibida.
+
+$$
+F(2,77)=4.4973, p = 0.01422
+$$
+
+## {auto-animate="true"}
+
+### Resultados {auto-animate="true"}
+
+![](./figuras/F2A_PAD_LMER.png){fig-align="center"}
+
+## {auto-animate="true"}
+
+### Resultados {auto-animate="true"}
+
+![](./figuras/F2B_Slop_LMER.png){fig-align="center"}
 
 # Discusion {visibility="hidden"}
 
@@ -316,99 +364,91 @@ Resultados va aca
 
 ### Discusión
 
-#### Percepción espacial
-
-El volumen de sala percibido es subestimado en
-
--   un 54% para el entorno real
--   un 56% para el entorno virtual
+Los resultados demuestran una tendencia a la sobreestimación de las distancias reportadas para los estímulos sonoros.
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Discusión
 
-#### Percepción espacial
+Los resultados demuestran una tendencia a la sobreestimación de las distancias reportadas para los estímulos sonoros.
 
-El volumen de sala percibido es subestimado en
-
--   un 54% para el entorno real
--   un 56% para el entorno virtual
-
-El resultado de la subestimación del entorno virtual coincide con lo reportado en @kelly_perceived_2017, donde se realiza un experimento con un casco similar (HTC Vive).
+Esto diverge de los resultados de experimentos de percepción de distancia tradicional. De todas formas, otros reportes de experimentos web reflejan una tendencia a la sobreestimación de las fuentes sonoras.
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Discusión
 
-#### Percepción espacial
-
-El volumen de sala percibido es subestimado en
-
--   un 54% para el entorno real
--   un 56% para el entorno virtual
-
-El resultado de la subestimación del entorno virtual coincide con lo reportado en @kelly_perceived_2017, donde se realiza un experimento con un casco similar (HTC Vive).
-
-La subestimación del entorno real puede estar vinculada al procedimeinto experimental y al método de reporte.
+La interacción se explica por las diferencias significativas observables para la estimación de distancia del estímulo más cercano y más lejano entre las dos condiciones analizadas.
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Discusión
 
-#### Comparación de entorno real vs entorno virtual
+La interacción se explica por las diferencias significativas observables para la estimación de distancia del estímulo más cercano y más lejano entre las dos condiciones analizadas.
 
-Similar estimación de tamaño para ambos entornos.
+En el experimento web ("Entorno desconocido") se sobrestimó la distancia del estímulo sonoro más cercano. Contrariamente, la posición del estímulo sonoro más lejano fue subestimada.
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Discusión
 
-#### Comparación de entorno real vs entorno virtual
+La interacción se explica por las diferencias significativas observables para la estimación de distancia del estímulo más cercano y más lejano entre las dos condiciones analizadas.
 
-Similar estimación de tamaño para ambos entornos.
+En el experimento web ("Entorno desconocido") se sobrestimó la distancia del estímulo sonoro más cercano. Contrariamente, la posición del estímulo sonoro más lejano fue subestimada.
 
-Difiere a lo reportado en @renner_perception_2013 donde se asevera que el tamaño de los entornos virtuales es subestimado en un 74% con respecto a su contraparte real.
+En la condición "Entorno Controlado", se puede observar que este patrón se invierte. La posición del estímulo más cercano se subestima y se sobreestima la posición del más lejano.
+
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+No existen diferencias significativas en las compresión individual de los sujetos entre la sala Control y Entorno Controlado (pendientes del modelo de efectos mixtos)
+
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Discusión
+
+No existen diferencias significativas en las compresión individual de los sujetos entre la sala Control y Entorno Controlado (pendientes del modelo de efectos mixtos)
+
+Sí son observables diferencias significativas entre las pendientes de Control y Entorno Controlado con respecto a Entorno Desconocido (obtenido a partir del experimento web).
 
 # Conclusion {visibility="hidden"}
 
-## Conclusión {transition="fade-in" transition-speed="fast" auto-animate="true"}
+## {transition="fade-in" transition-speed="fast" auto-animate="true"}
+
+### Conclusión
 
 <br> <br> <br>
 
-Pese a que existe una subestimación considerable del entorno, se observa una escasa diferencia entre el tamaño percibido para las modalidades real y virtual.
 
-## Conclusión {auto-animate="true"}
+## {auto-animate="true"}
 
-<br>
-
-Pese a que existe una subestimación considerable del entorno, se observa una escasa diferencia entre el tamaño percibido para las modalidades real y virtual.
+### Conclusión
 
 <br>
 
-Los entornos virtuales son percibidos de forma verosímil.
+Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos.
 
-## Conclusión {auto-animate="true"}
+## {auto-animate="true"}
+### Conclusión
 
-Pese a que existe una subestimación considerable del entorno, se observa una escasa diferencia entre el tamaño percibido para las modalidades real y virtual.
+Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos. 
 
-Los entornos virtuales son percibidos de forma verosímil.
-
-<br>
-
-La herramienta desarrollada presenta validez ecológica para su uso en la modalidad visual de experimentos de Percepción Auditiva de Distancia.
+Esto destaca la necesidad de continuar desarrollando estas tecnologías para asegurar una inmersión efectiva en entornos no controlados.
 
 # End {visibility="hidden"}
 
 ### ¡Gracias! ¿Preguntas?
 
-### Desarrollo y validación de un entorno visual virtual para experimentos psicofísicos
+### Estudio de percepción auditiva de distancia: comparación entre experimento en entorno controlado y experimento remoto
 
 Joaquín Cerviño, Berenice Piceda, Esteban N. Lombera, Ramiro O. Vergara <br> contacto: jcervino4\@uvq.edu.ar
 
 ::: {layout="[[1.5,1.2,1.5],[1]]"}
 ![](imgs/logos/lapso_black3.png)
 
-![](imgs/logos/Unqui.png) ![](imgs/logos/logo_acaa.png)
+![](imgs/logos/Unqui.png) ![](imgs/logos/footer_banner_congreso.png)
 
-![](imgs/logos/Foncyt.png)
+![](imgs/logos/Conicet.png)
 :::
