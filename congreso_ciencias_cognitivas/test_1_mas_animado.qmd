@@ -306,23 +306,23 @@ Entorno no controlado
 
 <br>
 
-Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto.
+Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto. Se utilizó el paquete lmer de R.
 
 ## {auto-animate="true"}
 
 ### Resultados {auto-animate="true"}
 
-Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto.
+Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto. Se utilizó el paquete lmer de R.
 
-El Análisis fue hecho con el paquete lmer de R.
+Se incluyeron datos de un experimento previo como "Control". El mismo tenía como objetivo la comparación de técnicas de espacialización de estímulos sonoros.
 
 ## {auto-animate="true"}
 
 ### Resultados {auto-animate="true"}
 
-Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto.
+Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto. Se utilizó el paquete lmer de R.
 
-El Análisis fue hecho con el paquete lmer de R.
+Se incluyeron datos de un experimento previo como "Control". El mismo tenía como objetivo la comparación de técnicas de espacialización de estímulos sonoros.
 
 Se observa una interacción significativa entre la condición de entorno y distancia percibida.
 
@@ -341,6 +341,7 @@ $$
 ### Resultados {auto-animate="true"}
 
 ![](./figuras/F2B_Slop_LMER.png){fig-align="center"}
+
 
 # Discusion {visibility="hidden"}
 
@@ -444,7 +445,7 @@ Los resultados revelan una divergencia significativa en los coeficientes de comp
 
 Esto destaca la necesidad de continuar desarrollando estas tecnologías para asegurar una inmersión efectiva en entornos no controlados.
 
-A pesar de estas diferencias el entorno no controlado tuvo una performance aceptable, sobre todo considerando su aplicación en contextos lúdicos donde se busca un efecto de distancia y no simulaciones exactas.
+A pesar de estas diferencias el entorno no controlado tuvo una performance aceptable, sobre todo considerando su aplicación en contextos recreativos donde se busca un efecto de distancia y no simulaciones exactas.
 
 # End {visibility="hidden"}
 
