@@ -158,11 +158,11 @@ Setups experimentales para el estudio de la percepción auditiva de distancia.
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
-### Introducción
+### Objetivo
 
-#### Objetivo
+#### Pregunta de investigación
 
-Comparar la percepción auditiva de fuentes virtuales en dos contextos.
+¿Es posible reproducir los resultados reportados en la literatura obtenidos con equipamiento profesional en un contexto donde se utilice equipamiento hogareño?
 
 ::: columns
 ::: {.column width="50%"}
@@ -436,6 +436,15 @@ Los resultados revelan una divergencia significativa en los coeficientes de comp
 Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos. 
 
 Esto destaca la necesidad de continuar desarrollando estas tecnologías para asegurar una inmersión efectiva en entornos no controlados.
+
+## {auto-animate="true"}
+### Conclusión
+
+Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos. 
+
+Esto destaca la necesidad de continuar desarrollando estas tecnologías para asegurar una inmersión efectiva en entornos no controlados.
+
+A pesar de estas diferencias el entorno no controlado tuvo una performance aceptable, sobre todo considerando su aplicación en contextos lúdicos donde se busca un efecto de distancia y no simulaciones exactas.
 
 # End {visibility="hidden"}
 
