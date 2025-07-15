@@ -104,4 +104,4 @@ results_tbl %>%
   
   select(-c(percived_distance,signed_bias,unsigned_bias,abs_bias)) %>%
   
-  write_csv("./ResultsData/Dresults.csv")
+ # write_csv("./ResultsData/Dresults.csv")
