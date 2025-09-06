@@ -121,7 +121,7 @@ Se vale de los siguientes indicios:
 -   Intensidad de estímulo
 -   Relación entre energía directa y reverberante de estímulo
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 Se cuantifica comunmente de acuerdo a una función de potencia con la forma
 
@@ -133,7 +133,7 @@ $$
 ::: {.column width="50%"}
 ![](imgs/curva.png){width="90%"}
 :::
-:::
+:::::
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
@@ -146,7 +146,7 @@ Setups experimentales para el estudio de la percepción auditiva de distancia.
 -   Entornos experimentales controlados
 -   Fuentes sonoras reales o virtuales (HRTF / BRIR)
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](imgs/setup/sala_teatro.jpg)
 :::
@@ -154,7 +154,7 @@ Setups experimentales para el estudio de la percepción auditiva de distancia.
 ::: {.column width="50%"}
 ![](imgs/setup/sala_untref.jpg)
 :::
-:::
+:::::
 
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
@@ -164,7 +164,7 @@ Setups experimentales para el estudio de la percepción auditiva de distancia.
 
 ¿Es posible reproducir los resultados reportados en la literatura obtenidos con equipamiento profesional en un contexto donde se utilice equipamiento hogareño?
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 Entorno controlado
 
@@ -182,7 +182,7 @@ Entorno no controlado
     -   Diversa calidad
     -   Distinto tipo
 :::
-:::
+:::::
 
 # Methods {visibility="hidden"}
 
@@ -190,7 +190,7 @@ Entorno no controlado
 
 ### Metodología
 
-::: columns
+:::::: columns
 ::: {.column width="30%"}
 #### Participantes
 
@@ -212,13 +212,13 @@ Entorno no controlado
 
 ::: {.column width="30%"}
 :::
-:::
+::::::
 
 ##  {auto-animate="true"}
 
 ### Metodología
 
-::: columns
+:::::: columns
 ::: {.column width="30%"}
 #### Participantes
 
@@ -252,13 +252,13 @@ Entorno no controlado
 
 ::: {.column width="30%"}
 :::
-:::
+::::::
 
 ##  {auto-animate="true"}
 
 ### Metodología
 
-::: columns
+:::::: columns
 ::: {.column width="30%"}
 #### Participantes
 
@@ -296,19 +296,19 @@ Entorno no controlado
 1.  Encuesta con datos poblacionales
 2.  Sesión experimental programada en PsychoPy
 :::
-:::
+::::::
 
 # Results {visibility="hidden"}
 
-## {auto-animate="true"}
+##  {auto-animate="true"}
 
-### Resultados 
+### Resultados
 
 <br>
 
 Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se consideró condición entorno como efecto fijo, y como efectos aleatorios la compresión (pendiente) e intercepto. Se utilizó el paquete lmer de R.
 
-## {auto-animate="true"}
+##  {auto-animate="true"}
 
 ### Resultados {auto-animate="true"}
 
@@ -316,7 +316,7 @@ Se realizó un análisis estadístico aplicando un modelo de efectos mixtos. Se 
 
 Se incluyeron datos de un experimento previo como "Control". El mismo tenía como objetivo la comparación de técnicas de espacialización de estímulos sonoros.
 
-## {auto-animate="true"}
+##  {auto-animate="true"}
 
 ### Resultados {auto-animate="true"}
 
@@ -330,18 +330,17 @@ $$
 F(2,77)=4.4973, p = 0.01422
 $$
 
-## {auto-animate="true"}
+##  {auto-animate="true"}
 
 ### Resultados {auto-animate="true"}
 
 ![](./figuras/F2A_PAD_LMER.png){fig-align="center"}
 
-## {auto-animate="true"}
+##  {auto-animate="true"}
 
 ### Resultados {auto-animate="true"}
 
 ![](./figuras/F2B_Slop_LMER.png){fig-align="center"}
-
 
 # Discusion {visibility="hidden"}
 
@@ -399,7 +398,6 @@ En el experimento web ("Entorno desconocido") se sobrestimó la distancia del es
 
 En la condición "Entorno Controlado", se puede observar que este patrón se invierte. La posición del estímulo más cercano se subestima y se sobreestima la posición del más lejano.
 
-
 ##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Discusión
@@ -416,14 +414,13 @@ Sí son observables diferencias significativas entre las pendientes de Control y
 
 # Conclusion {visibility="hidden"}
 
-## {transition="fade-in" transition-speed="fast" auto-animate="true"}
+##  {transition="fade-in" transition-speed="fast" auto-animate="true"}
 
 ### Conclusión
 
 <br> <br> <br>
 
-
-## {auto-animate="true"}
+##  {auto-animate="true"}
 
 ### Conclusión
 
@@ -431,17 +428,19 @@ Sí son observables diferencias significativas entre las pendientes de Control y
 
 Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos.
 
-## {auto-animate="true"}
+##  {auto-animate="true"}
+
 ### Conclusión
 
-Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos. 
+Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos.
 
 Esto destaca la necesidad de continuar desarrollando estas tecnologías para asegurar una inmersión efectiva en entornos no controlados.
 
-## {auto-animate="true"}
+##  {auto-animate="true"}
+
 ### Conclusión
 
-Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos. 
+Los resultados revelan una divergencia significativa en los coeficientes de compresión de la percepción auditiva de distancia entre ambos contextos.
 
 Esto destaca la necesidad de continuar desarrollando estas tecnologías para asegurar una inmersión efectiva en entornos no controlados.
 
