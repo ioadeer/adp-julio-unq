@@ -1,0 +1,3 @@
+﻿image_2.started,image_2.stopped,key_resp.keys,key_resp.rt,key_resp.started,key_resp.stopped,instruccion.started,instruccion.stopped,key_resp_4.keys,key_resp_4.rt,participant,session,date,expName,psychopyVersion,frameRate,
+16.51857959991321,None,return,1.9486306998878717,23.527870799880475,None,,,,,asd,001,2022-07-05_12h37.13.191,audio-text-input,2022.1.2,60.16677033314363,
+,,,,,,23.527870799880475,None,return,11.642545799724758,asd,001,2022-07-05_12h37.13.191,audio-text-input,2022.1.2,60.16677033314363,

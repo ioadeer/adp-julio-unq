@@ -1,0 +1,4 @@
+﻿image_2.started,image_2.stopped,key_resp.keys,key_resp.rt,key_resp.started,key_resp.stopped,instruccion.started,instruccion.stopped,key_resp_4.keys,key_resp_4.rt,text_der.started,text_der.stopped,key_resp_5.keys,key_resp_5.rt,key_resp_5.started,key_resp_5.stopped,participant,session,date,expName,psychopyVersion,frameRate,
+17.00531499972567,None,return,0.7892207000404596,24.020155699923635,None,,,,,,,,,,,,001,2022-07-05_13h11.26.658,audio-text-input,2022.1.2,60.06525499833225,
+,,,,,,24.020155699923635,None,return,9.08131319982931,,,,,,,,001,2022-07-05_13h11.26.658,audio-text-input,2022.1.2,60.06525499833225,
+,,,,,,,,,,33.921105899848044,None,return,2.1124860998243093,33.921105899848044,None,,001,2022-07-05_13h11.26.658,audio-text-input,2022.1.2,60.06525499833225,

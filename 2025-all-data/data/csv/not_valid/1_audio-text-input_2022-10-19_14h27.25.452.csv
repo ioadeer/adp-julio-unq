@@ -1,0 +1,5 @@
+﻿participant,session,date,expName,psychopyVersion,OS,frameRate,key_resp.keys,key_resp.rt,key_resp_4.keys,key_resp_4.rt,key_resp_5.keys,key_resp_5.rt
+1,001,2022-10-19_14h27.25.452,audio-text-input,2022.2.2,Win32,60.06366749,,,,,,
+1,001,2022-10-19_14h27.25.452,audio-text-input,2022.2.2,Win32,60.06366749,return,7.9748,,,,
+1,001,2022-10-19_14h27.25.452,audio-text-input,2022.2.2,Win32,60.06366749,,,return,14.9031,,
+1,001,2022-10-19_14h27.25.452,audio-text-input,2022.2.2,Win32,60.06366749,,,,,return,3.7368

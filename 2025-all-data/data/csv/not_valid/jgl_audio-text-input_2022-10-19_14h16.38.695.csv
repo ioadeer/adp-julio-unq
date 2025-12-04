@@ -1,0 +1,3 @@
+﻿participant,session,date,expName,psychopyVersion,OS,frameRate,key_resp.keys,key_resp.rt
+jgl,001,2022-10-19_14h16.38.695,audio-text-input,2022.2.2,Win32,59.95203837,,
+jgl,001,2022-10-19_14h16.38.695,audio-text-input,2022.2.2,Win32,59.95203837,return,24.375

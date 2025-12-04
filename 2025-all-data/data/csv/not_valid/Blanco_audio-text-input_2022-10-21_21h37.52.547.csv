@@ -1,0 +1,12 @@
+﻿participant,session,date,expName,psychopyVersion,OS,frameRate,key_resp.keys,key_resp.rt,key_resp_4.keys,key_resp_4.rt,key_resp_5.keys,key_resp_5.rt,key_resp_2.keys,key_resp_2.rt,typedWord,trials_2.thisRepN,trials_2.thisTrialN,trials_2.thisN,trials_2.thisIndex,trials_2.ran,soundEstimulus
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,,,,,,,,,
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,return,35.6526,,,,,,,,,,,,,
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,return,16.4882,,,,,,,,,,,
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,return,3.298,,,,,,,,,
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,return,7.7992,,,,,,,
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,,,4,0,0,0,1,1,estimulos/2.wav
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,,,6,0,1,1,3,1,estimulos/4.wav
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,,,3,0,2,2,4,1,estimulos/5.wav
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,,,3,0,3,3,5,1,estimulos/6.wav
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,,,6,0,4,4,0,1,estimulos/1.wav
+Blanco,001,2022-10-21_21h37.52.547,audio-text-input,2022.2.2,Win32,59.99880002,,,,,,,,,5,0,5,5,2,1,estimulos/3.wav

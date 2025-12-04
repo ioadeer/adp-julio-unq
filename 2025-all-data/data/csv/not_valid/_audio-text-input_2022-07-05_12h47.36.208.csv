@@ -1,0 +1,6 @@
+﻿soundEstimulus,trials_2.thisRepN,trials_2.thisTrialN,trials_2.thisN,trials_2.thisIndex,image_2.started,image_2.stopped,key_resp.keys,key_resp.rt,key_resp.started,key_resp.stopped,instruccion.started,instruccion.stopped,key_resp_4.keys,key_resp_4.rt,instruccion_2.started,instruccion_2.stopped,key_resp_2.keys,key_resp_2.rt,key_resp_2.started,key_resp_2.stopped,soundEst.started,soundEst.stopped,testText.started,testText.stopped,instr_2.started,instr_2.stopped,typedWord,participant,session,date,expName,psychopyVersion,frameRate,
+,,,,,20.997448000125587,None,return,2.3839815999381244,28.01196390017867,None,,,,,,,,,,,,,,,,,,,001,2022-07-05_12h47.36.208,audio-text-input,2022.1.2,60.26056676663337,
+,,,,,,,,,,,28.01196390017867,None,return,5.354653100017458,,,,,,,,,,,,,,,001,2022-07-05_12h47.36.208,audio-text-input,2022.1.2,60.26056676663337,
+,,,,,,,,,,,,,,,35.77927890000865,None,return,0.7748584002256393,35.77927890000865,None,,,,,,,,,001,2022-07-05_12h47.36.208,audio-text-input,2022.1.2,60.26056676663337,
+estimulos/5.wav,0,0,0,4,,,,,,,,,,,,,,,,,0.002505360171198845,None,41.713069800287485,None,41.713069800287485,None,,,001,2022-07-05_12h47.36.208,audio-text-input,2022.1.2,60.26056676663337,
+,,,,,,,,,,,,,,,,,,,,,0.011276559438556433,None,,,,,,,,,,,,
