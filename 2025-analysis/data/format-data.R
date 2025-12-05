@@ -1,7 +1,7 @@
 library(tidyverse)
 library(dplyr)
 
-data_sala.tbl <- read.csv(file='2025-all-data/data/data-sala.csv', sep = ' ')
+data_sala.tbl <- read.csv(file='2025-analysis/data/data-sala.csv', sep = ' ')
 
 data_sala.tbl <- data_sala.tbl %>%
   rename(subject = sujeto) %>%
@@ -11,7 +11,7 @@ data_sala.tbl <- data_sala.tbl %>%
   mutate(subject = as.numeric(subject)) %>%
   mutate(condition = "Controlled environment")
 
-data_internet.tbl <- read.csv(file='./2025-all-data/data/data-internet.csv', sep = ' ')
+data_internet.tbl <- read.csv(file='./2025-analysis/data/data-internet.csv', sep = ' ')
 
 data_internet.tbl <- data_internet.tbl %>%
   select(c(subject, trial, target_distance, perc_distance)) %>%
@@ -20,4 +20,4 @@ data_internet.tbl <- data_internet.tbl %>%
 
 data_adp <- rbind(data_sala.tbl, data_internet.tbl)
 
-write.csv(data_adp, file = "./2025-all-data/data/data-internet-sala.csv", row.names = FALSE)
+write.csv(data_adp, file = "./2025-analysis/data/data-internet-sala.csv", row.names = FALSE)
